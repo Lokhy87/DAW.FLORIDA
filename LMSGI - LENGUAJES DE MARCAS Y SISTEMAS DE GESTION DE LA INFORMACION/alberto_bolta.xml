@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<curriculum>
+    <datos_personales>
+        <nombre>Alberto Bolta Sanmateu</nombre>
+        <fecha_nacimiento>8 enero 1987</fecha_nacimiento>
+        <lugar_nacimiento>Gandia</lugar_nacimiento>
+        <nacionalidad>España</nacionalidad>
+        <dni>53384069-B</dni>
+        <foto>C:/Users/admin/OneDrive/Escritorio/FP/LMSGI - LENGUAJES DE MARCAS Y SISTEMAS DE GESTION DE LA INFORMACION/fotocarnet.png</foto>
+    </datos_personales>
+    <datos_direccion_contacto>
+        <tipo_via>Plaza</tipo_via>
+        <nombre_via>Ciudad de la Lisa</nombre_via>
+        <numero>8</numero>
+        <piso>Entresuelo</piso>
+        <puerta>1</puerta>
+        <codigo_postal>46920</codigo_postal>
+        <pais>España</pais>
+        <provincia>Valencia</provincia>
+        <municipio>Mislata</municipio>
+        <email>a.bolta@gmail.com</email>
+        <telefono>622363288</telefono>
+    </datos_direccion_contacto>
+    <otros_datos>
+        <perfil tipo='Linkedin'>www.linkedin.com/in/alberto-bolta-sanmateu-b43188306</perfil>
+        <perfil tipo='Repositorio'>https://github.com/Lokhy87</perfil>
+    </otros_datos>
+    <formacion>
+        <titulacion>
+            <nombre>Licenciatura en Ciencias de la Actividad Fisica y el Deporte</nombre>
+            <centro>Universidad Catolica de Valencia</centro>
+            <fecha_inicio>
+                <mes>Septiembre</mes> 
+                <año>2005</año>
+            </fecha_inicio>
+            <fecha_finalizacion>
+                <mes>Junio</mes> 
+                <año>2010</año>
+            </fecha_finalizacion>
+        </titulacion>
+        <titulacion>
+            <nombre>Bootcamp Data Science</nombre>
+            <centro>The Bridge</centro>
+            <fecha_inicio>
+                <mes>Febrero</mes> 
+                <año>2024</año>
+            </fecha_inicio>
+            <fecha_finalizacion>
+                <mes>Agosto</mes> 
+                <año>2024</año>
+            </fecha_finalizacion>
+        </titulacion>
+    </formacion>
+    <idiomas>
+        <idioma tipo='Materno'>
+            <nombre>Castellano</nombre>
+            <nivel_expresion_oral>Alto</nivel_expresion_oral>
+            <nivel_comprension_oral>Alto</nivel_comprension_oral>
+            <nivel_expresion_escrita>Alto</nivel_expresion_escrita>
+        </idioma>
+        <idioma tipo='No materno'>
+            <nombre>Inglés</nombre>
+            <nivel_expresion_oral>Medio</nivel_expresion_oral>
+            <nivel_comprension_oral>Medio</nivel_comprension_oral>
+            <nivel_expresion_escrita>Medio</nivel_expresion_escrita>
+        </idioma>
+        <idioma tipo='Materno'>
+            <nombre>Valenciano</nombre>
+            <nivel_expresion_oral>Alto</nivel_expresion_oral>
+            <nivel_comprension_oral>Alto</nivel_comprension_oral>
+            <nivel_expresion_escrita>Medio</nivel_expresion_escrita>
+        </idioma>
+        <idioma tipo='No materno'>
+            <nombre>Italiano</nombre>
+            <nivel_expresion_oral>Medio</nivel_expresion_oral>
+            <nivel_comprension_oral>Medio</nivel_comprension_oral>
+            <nivel_expresion_escrita>Medio</nivel_expresion_escrita>
+        </idioma>
+    </idiomas>
+    <experiencia_laboral>
+        <empresa>
+            <nombre>Alfa Trainners</nombre>
+            <puesto>Entrenador personal</puesto>
+            <inicio_contrato>
+                <dia>26</dia>
+                <mes>Noviembre</mes> 
+                <año>2023</año>
+            </inicio_contrato>
+            <final_contrato>Puesto actual</final_contrato>
+        </empresa>
+        <empresa>
+            <nombre>TennisTrainer</nombre>
+            <puesto>Preparador fisico y entrenador</puesto>
+            <inicio_contrato>
+                <dia>10</dia>
+                <mes>Julio</mes> 
+                <año>2013</año>
+            </inicio_contrato>
+            <final_contrato>
+                <dia>1</dia>
+                <mes>Junio</mes> 
+                <año>2021</año>
+            </final_contrato>
+        </empresa>
+    </experiencia_laboral>
+    <competencias>
+        <competencia>
+            <nombre>Liderazgo</nombre>
+            <nivel>2</nivel>
+        </competencia>
+        <competencia>
+            <nombre>Trabajo en equipo</nombre>
+            <nivel>5</nivel>
+        </competencia>
+        <competencia>
+            <nombre>Iniciativa</nombre>
+            <nivel>2</nivel>
+        </competencia>
+        <competencia>
+            <nombre>Creatividad</nombre>
+            <nivel>3</nivel>
+        </competencia>
+        <competencia>
+            <nombre>Autonomía</nombre>
+            <nivel>4</nivel>
+        </competencia>
+    </competencias>
+    <datos_adicionales>
+        <aficiones>
+            <nombre>Deportes</nombre>
+        </aficiones>
+        <disponibilidad_viajar>
+            <vehiculo_propio></vehiculo_propio>
+            <permisos>
+                <nombre>B</nombre>
+                <nombre>C</nombre>
+                <nombre>C+E</nombre>
+            </permisos>
+        </disponibilidad_viajar>
+    </datos_adicionales>
+</curriculum>
