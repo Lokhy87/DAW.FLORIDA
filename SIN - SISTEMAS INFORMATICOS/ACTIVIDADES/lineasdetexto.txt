@@ -1,7 +1,0 @@
-La designación "Linux" al principio fue usada por Torvalds sólo para el núcleo. 
-El núcleo fue, sin embargo, con frecuencia usado junto con otro software, especialmente con el del proyecto de GNU. Esta variante de GNU rápidamente se hizo la más popular, ya que no había ningún otro núcleo libre que funcionara en ese tiempo. 
-Cuando la gente comenzó a referirse hacia esta recopilación como "Linux", Richard Stallman, el fundador del proyecto de GNU, solicitó que se usara el nombre GNU/Linux, para reconocer el rol del software de GNU.
-Esta controversia, representó un punto de inflexión.​ 
-En junio de 1994, en el boletín de GNU, Linux fue mencionado como un "clon libre de UNIX", y el Proyecto Debian comenzó a llamar a su producto GNU/Linux. 
-En mayo de 1996, Richard Stallman publicó al editor Emacs 19.31, en el cual el tipo de sistema fue renombrado de Linux a Lignux. Esta "escritura" fue pretendida para referirse expresamente a la combinación de GNU y Linux, pero esto pronto fue abandonado en favor de "GNU/Linux".
-El producto terminado es más a menudo denominado simplemente como "Linux", como el más simple, el nombre original. Stallman anunció su demanda por un cambio de nombre sólo después de que el sistema ya se había hecho popular.
