@@ -115,7 +115,7 @@
 
         for ($i = 0; $i < count($partidos); $i++) {
             for ($j = 0; $j < count($partidos[$i]);$j++){
-                echo "$partidos[$i][$j] "
+                echo "$partidos[$i][$j]";
             }
         }
 
