@@ -18,6 +18,20 @@
         $meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];</h1>
 
     <?php
+    $meses = ["Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"];
+
+    $fecha = [];
+
+    for ($i = 0; $i = 10; $i++) {
+        $fecha = random_int(1,31);
+    }
+
+    foreach ($meses as $mes) {
+        $fecha[$mes] = date("1", strtotime($mes));
+
+    }
+
+
   
 
   

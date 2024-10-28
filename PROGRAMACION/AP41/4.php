@@ -10,9 +10,48 @@
         Con el array generado de victorias y empates, calcula los porcentajes de partidas ganadas por el jugador 1, por el jugador 2 y los empates</h1>
 
     <?php
-  
+    
+    $resultados = [];
 
-  
+    for ($i = 0; $i < 5; $i++) {
+        $dado1 = random_int(1,6);
+        $dado2 = random_int(1,6);   
+
+        if ($dado1 == $dado2) {
+            echo "El resultado es un empate";
+            $resultados[] = 'Empate';
+        } elseif ($dado1 > $dado2) {
+            echo "El ganador es el jugador 1";
+            $resultados[] = "Jugador 1";
+        } else {
+            echo "El ganador es el jugador 2";
+            $resultados[] = "Jugador 2";
+        }
+    }
+
+    $ganador1 = 0;
+    $ganador2 = 0;
+    $empates = 0;
+
+    foreach ($resultados as $resultado) {
+        if ($resultado == "Jugador 1") {
+            $ganador1++;
+        } elseif ($resultado == "Jugador 2") {
+            $ganador2++;
+        } else {
+            $empates++;
+        }
+    }
+    
+    $totalTiradas = count($resultados);
+    $totalVictorias1 = ($ganador1 / $totalTiradas) * 100;
+    $totalVictorias2 = ($ganador2 / $totalTiradas) * 100;
+    $totalEmpates = ($empates / $totalTiradas) * 100;
+    
+    echo "El porcentaje de victorias del Jugador 1 es $totalVictorias1 %<br>";
+    echo "El porcentaje de victorias del Jugador 2 es $totalVictorias2 %<br>";
+    echo "El porcentaje de Empates es $totalEmpates %<br>";
+
     ?>
 </body>
 </html>
