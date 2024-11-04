@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<serie
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="serie.xsd">
+    <nombre>Breaking Bad</nombre>
+    <fecha_estreno>2008-04-11</fecha_estreno>
+    <numero_temporadas>5</numero_temporadas>
+    <genero>Drama</genero>
+    <actores>
+        <actor tipo="ppal">Bryan Cranston</actor>
+        <actor tipo="ppal">Aaron Paul</actor>
+        <actor tipo="ppal">Anna Gunn</actor>
+        <actor tipo="ppal">Dean Norris</actor>
+        <actor tipo="ppal">Betsy Brandt</actor>
+        <actor tipo="sec">RJ Mitte</actor>
+        <actor tipo="sec">Bob Odenkirk</actor>
+        <actor tipo="sec">Giancarlo Esposito</actor>
+        <actor tipo="sec">Jonathan Banks</actor>
+        <actor tipo="sec">Laura Fraser</actor>
+        <actor tipo="sec">Jesse Plemons</actor>
+    </actores>
+    <director>Vince Gilligan</director>
+</serie>
