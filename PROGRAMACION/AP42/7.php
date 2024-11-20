@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FIBONACCI</title>
+    <title>EJERCICIO 7</title>
 </head>
 <body>
-    <h1>Realiza un algoritmo para generar N elementos de la sucesión de Fibonacci (0, 1, 1, 2, 3, 5, 8, 13,...). El planteamiento del algoritmo correspondiente 
-        se hace a partir del análisis de la sucesión, en la que se puede observar que un tercer valor de la serie está dado por la suma de los dos valores 
-        previos, de aquí que se asignan los dos valores para sumar (0, 1), que dan la base para obtener el siguiente elemento que se busca.</h1>
+    <h1>Crea un script para desplazar los 0 al final del array, respetando el orden del resto de valores. Muestra el array. Puedes usar un array de prueba, 
+        por ejemplo: [2, 5, 7, 0, 4, 0, 7, -5, 8, 0]. 
+        Puedes usar array_splice, array_push y implode si te son útiles.</h1>
 
     <?php
-    $N = 10;
-    $fibonacci = [0, 1];
 
-    for ($i = 2; $i < $N; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
-    }
+    // Array
+    $array = [2, 5, 7, 0, 4, 0, 7, -5, 8, 0];
 
-    echo "Los primeros $N elementos de la sucesion de Fibonacci son:<br>";
-    for ($i = 0; $i < $N; $i++) {
-        echo "$fibonacci[$i]<br>";
+    // Desplazar 0 al final 
+    for ($i = 0; $i < count($array); $i++){
+        if ($array[$i] == 0){
+            $valor = $array[$i];
+            array_splice($array, $i, 1); // Eliminar 0
+            $array[] = $valor; // Añadir 0 al final
+            $i--;
+        }
+
     }
+    
+    echo "Array modificado: " . implode(", ", $array);
+
     ?>
 </body>
 </html>

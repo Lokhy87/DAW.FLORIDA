@@ -1,25 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FIBONACCI</title>
+    <title>EJERCICIO 10</title>
 </head>
 <body>
-    <h1>Realiza un algoritmo para generar N elementos de la sucesión de Fibonacci (0, 1, 1, 2, 3, 5, 8, 13,...). El planteamiento del algoritmo correspondiente 
-        se hace a partir del análisis de la sucesión, en la que se puede observar que un tercer valor de la serie está dado por la suma de los dos valores 
-        previos, de aquí que se asignan los dos valores para sumar (0, 1), que dan la base para obtener el siguiente elemento que se busca.</h1>
+    <h1>Crea un script para encontrar y mostrar el array dividido en otros dos, de forma que sumen lo mismo a ambos lados de la división. 
+        Suponemos que el array que le pasamos cumple la premisa.</h1>
 
     <?php
-    $N = 10;
-    $fibonacci = [0, 1];
+    
+    // Array que cumple condicion
+    $array = [1, 2, 4, 7, 5, 3, 6, 2, 5];
 
-    for ($i = 2; $i < $N; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+    $totalArrray = array_sum($array); // Suma todo el array
+
+    // Comprobar si suma total es par
+    if($totalArrray % 2 != 0){
+        echo "No es posible dividir el array en dos partes con la misma suma";
+    } else {
+        $mitadSuma = $totalArrray / 2;
+
     }
 
-    echo "Los primeros $N elementos de la sucesion de Fibonacci son:<br>";
-    for ($i = 0; $i < $N; $i++) {
-        echo "$fibonacci[$i]<br>";
-    }
+
+
     ?>
 </body>
 </html>

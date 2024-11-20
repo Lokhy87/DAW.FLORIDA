@@ -1,25 +1,42 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FIBONACCI</title>
+    <title>EJERCICIO 8</title>
 </head>
 <body>
-    <h1>Realiza un algoritmo para generar N elementos de la sucesión de Fibonacci (0, 1, 1, 2, 3, 5, 8, 13,...). El planteamiento del algoritmo correspondiente 
-        se hace a partir del análisis de la sucesión, en la que se puede observar que un tercer valor de la serie está dado por la suma de los dos valores 
-        previos, de aquí que se asignan los dos valores para sumar (0, 1), que dan la base para obtener el siguiente elemento que se busca.</h1>
+    <h1>Crea un script para realizar la transposición del array bi-dimensional, es decir, convertir las columnas en filas, y las filas en columnas.</h1>
 
     <?php
-    $N = 10;
-    $fibonacci = [0, 1];
+    // Definir el tamaño del array 
+    $filas = 4;
+    $columnas = 2;
 
-    for ($i = 2; $i < $N; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+    // Crear array
+    $arrayBidim = [];
+
+    for ($i = 0; $i < $filas; $i++) {
+        for ($j = 0; $j < $columnas; $j++) {
+            $arrayBidim[$i][$j] = random_int(0, 100);
+        }
     }
 
-    echo "Los primeros $N elementos de la sucesion de Fibonacci son:<br>";
-    for ($i = 0; $i < $N; $i++) {
-        echo "$fibonacci[$i]<br>";
-    }
+    // Enseñar array 
+    echo "El array bidimensional queda: <br>";
+    echo "<pre>"; 
+    print_r($arrayBidim);
+    echo "</pre>";
+
+    // Transponer el array
+    $arrTranspuesto = array_map(null, ...$arrayBidim);
+
+    // Enseñar array 
+    echo "Array transpuesto: <br>";
+    echo "<pre>";
+    print_r($arrTranspuesto);
+    echo "</pre>";
+
+
+
     ?>
 </body>
 </html>
