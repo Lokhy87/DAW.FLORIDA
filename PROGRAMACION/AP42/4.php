@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FIBONACCI</title>
+    <title>EJERCICIO 4</title>
 </head>
 <body>
-    <h1>Realiza un algoritmo para generar N elementos de la sucesión de Fibonacci (0, 1, 1, 2, 3, 5, 8, 13,...). El planteamiento del algoritmo correspondiente 
-        se hace a partir del análisis de la sucesión, en la que se puede observar que un tercer valor de la serie está dado por la suma de los dos valores 
-        previos, de aquí que se asignan los dos valores para sumar (0, 1), que dan la base para obtener el siguiente elemento que se busca.</h1>
+    <h1>Modifica el script anterior, de forma que, en vez de crear dos arrays, los números pares se almacenen en la fila 0 de un array bi-dimensional, 
+        y los impares en la fila 1 del mismo array. 
+        Almacena inicialmente los números en un array uni-dimensional y haz la separación a posteriori.</h1>
 
     <?php
-    $N = 10;
-    $fibonacci = [0, 1];
 
-    for ($i = 2; $i < $N; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
-    }
+// Genero array
+$arry = [];
 
-    echo "Los primeros $N elementos de la sucesion de Fibonacci son:<br>";
-    for ($i = 0; $i < $N; $i++) {
-        echo "$fibonacci[$i]<br>";
+// For para correr el array y poner datos
+for ($i = 0; $i <= 10; $i++) {
+    array_push($arry, rand(1, 100)); // Llenar el array con valores aleatorios
+}
+
+print_r($arry); // Imprimir el array generado
+echo "<br>";
+echo "<br>";
+
+$arrayOrdenado = [
+    0 => [], // Fila 0 para los números pares
+    1 => []  // Fila 1 para los números impares
+];
+
+// Foreach para separar en par/impar
+foreach ($arry as $numero) {
+    if($numero % 2 == 0){ 
+        $arrayOrdenado[0][] = $numero;
+    } else {
+        $arrayOrdenado[1][] = $numero;
     }
+}
+
+echo "El array final con filas pares y columnas impares es:";
+print_r($arrayOrdenado);
+
     ?>
 </body>
 </html>

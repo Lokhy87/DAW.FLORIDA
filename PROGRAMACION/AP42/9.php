@@ -1,25 +1,43 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FIBONACCI</title>
+    <title>EJERCICIO 9</title>
 </head>
 <body>
-    <h1>Realiza un algoritmo para generar N elementos de la sucesión de Fibonacci (0, 1, 1, 2, 3, 5, 8, 13,...). El planteamiento del algoritmo correspondiente 
-        se hace a partir del análisis de la sucesión, en la que se puede observar que un tercer valor de la serie está dado por la suma de los dos valores 
-        previos, de aquí que se asignan los dos valores para sumar (0, 1), que dan la base para obtener el siguiente elemento que se busca.</h1>
+    <h1>Crea un script para encontrar pares de números que tienen un diferencia pasada por teclado, 
+        por ejemplo: si la diferencia es 53, el par que cumple la condición es (39,92), tomando como array de datos [1, 15, 39, 75, 92].</h1>
 
     <?php
-    $N = 10;
-    $fibonacci = [0, 1];
 
-    for ($i = 2; $i < $N; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+    // Array
+    $array = [];
+
+    for ($i = 0; $i <= 10; $i++) {
+        array_push($array, rand(1, 100)); // Llenar el array con valores aleatorios
+    }
+    // Enseñar array 
+    echo "<pre>"; 
+    print_r($array);
+    echo "</pre>";
+
+    // Encontrar pares numeros con diferencia predeterminada
+    $diferencia = 10;
+    $paresdiferencia = 0;
+
+    for ($i = 0; $i < count($array); $i++){
+        for ($j = $i + 1; $j < count($array); $j++){
+            if (abs($array[$i] - $array[$j]) == $diferencia){
+                echo "Pares encontrados: (" . $array[$i] . ", " . $array[$j] . ")<br>";
+                $paresdiferencia++; 
+            } 
+        }
     }
 
-    echo "Los primeros $N elementos de la sucesion de Fibonacci son:<br>";
-    for ($i = 0; $i < $N; $i++) {
-        echo "$fibonacci[$i]<br>";
+    // Si no se encontraron pares
+    if ($paresdiferencia == 0) {
+        echo "No se encontraron pares con la diferencia de $diferencia.";
     }
+
     ?>
 </body>
 </html>

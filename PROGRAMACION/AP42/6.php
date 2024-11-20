@@ -1,25 +1,55 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FIBONACCI</title>
+    <title>EJERCICIO 6</title>
 </head>
 <body>
-    <h1>Realiza un algoritmo para generar N elementos de la sucesión de Fibonacci (0, 1, 1, 2, 3, 5, 8, 13,...). El planteamiento del algoritmo correspondiente 
-        se hace a partir del análisis de la sucesión, en la que se puede observar que un tercer valor de la serie está dado por la suma de los dos valores 
-        previos, de aquí que se asignan los dos valores para sumar (0, 1), que dan la base para obtener el siguiente elemento que se busca.</h1>
+    <h1>Haz un array con 10 notas. A continuación, elimina la nota mas baja y la más alta (solo una, en caso de estar repetida). Haz la media de las que quedan. 
+        Puedes comprobar si los datos són numéricos con la función is_numeric. Además puedes usar también array_splice y implode si te son útiles.</h1>
 
     <?php
-    $N = 10;
-    $fibonacci = [0, 1];
 
-    for ($i = 2; $i < $N; $i++) {
-        $fibonacci[$i] = $fibonacci[$i - 1] + $fibonacci[$i - 2];
+    // Array notas 
+    $arry = [];
+
+    for ($i = 0; $i <= 9; $i++){
+        array_push($arry, rand(1,10));
     }
 
-    echo "Los primeros $N elementos de la sucesion de Fibonacci son:<br>";
-    for ($i = 0; $i < $N; $i++) {
-        echo "$fibonacci[$i]<br>";
+    print_r($arry); // Imprimir resultado
+    echo "<br>";
+
+    // Eliminar notas
+    $maxIndice = array_search(max($arry), $arry);
+    unset($arry[$maxIndice]); // Eliminar nota mas alta
+    $minIndice = array_search(min($arry), $arry);
+    unset($arry[$minIndice]); // Eliminar nota mas baja
+    echo "<br>";
+
+    $arry = array_values($arry);
+    print_r($arry);
+    echo "<br>";
+
+    // Media array limpio
+    $media = array_sum($arry) / count($arry);
+    print_r($media);
+    echo "<br>";
+
+    // Comprobar si los datos son numericos 
+    $numericos = true;
+
+    foreach ($arry as $valor){
+        if (!is_numeric($valor)){
+            echo "El array contiene un valor no numérico.";
+            break;
+        }
     }
+    
+    if ($numericos) {
+        echo "Todos los datos son numéricos.<br>";
+    }
+
+   
     ?>
 </body>
 </html>
