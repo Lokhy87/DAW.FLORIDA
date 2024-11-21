@@ -1,29 +1,46 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<curriculum>
+<curriculum xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xsi:noNamespaceSchemaLocation="alberto_bolta.xsd">
     <datos_personales>
-        <nombre>Alberto Bolta Sanmateu</nombre>
-        <fecha_nacimiento>8 enero 1987</fecha_nacimiento>
+        <nombre>Alberto</nombre>
+        <apellidos>Bolta Sanmateu</apellidos>
+        <fecha_nacimiento>
+            <dia>08</dia>
+            <mes>01</mes>
+            <año>1987</año>
+        </fecha_nacimiento>
         <lugar_nacimiento>Gandia</lugar_nacimiento>
         <nacionalidad>España</nacionalidad>
-        <dni>53384069-B</dni>
+        <dni>53384069B</dni>
         <foto>C:/Users/admin/OneDrive/Escritorio/FP/LMSGI - LENGUAJES DE MARCAS Y SISTEMAS DE GESTION DE LA INFORMACION/fotocarnet.png</foto>
     </datos_personales>
     <datos_direccion_contacto>
-        <tipo_via>Plaza</tipo_via>
-        <nombre_via>Ciudad de la Lisa</nombre_via>
-        <numero>8</numero>
-        <piso>Entresuelo</piso>
-        <puerta>1</puerta>
-        <codigo_postal>46920</codigo_postal>
-        <pais>España</pais>
-        <provincia>Valencia</provincia>
-        <municipio>Mislata</municipio>
-        <email>a.bolta@gmail.com</email>
-        <telefono>622363288</telefono>
+        <domicilio>
+            <tipo_via>Plaza</tipo_via>
+            <nombre_via>Ciudad de la Lisa</nombre_via>
+            <numero>8</numero>
+            <piso>Entresuelo</piso>
+            <puerta>1</puerta>
+            <codigo_postal>46920</codigo_postal>
+            <pais>España</pais>
+            <provincia>Valencia</provincia>
+            <municipio>Mislata</municipio>
+        </domicilio>
+        <correo_electronico>
+            <email uso = 'personal'>a.bolta@gmail.com</email>
+            <email uso = 'profesional'>a.bolta@alfatrainers.com</email>
+        </correo_electronico>
+        <telefonos>
+            <telefono tipo = 'movil'>622363288</telefono>
+            <telefono tipo = 'fijo'></telefono>
+        </telefonos>
     </datos_direccion_contacto>
     <otros_datos>
-        <perfil tipo='Linkedin'>www.linkedin.com/in/alberto-bolta-sanmateu-b43188306</perfil>
-        <perfil tipo='Repositorio'>https://github.com/Lokhy87</perfil>
+        <pagina_web></pagina_web>
+        <redes_sociales>
+            <perfil nombre = 'Linkedin'>https://www.linkedin.com/in/alberto-bolta-sanmateu-b43188306</perfil>
+            <perfil nombre = 'Repositorio'>https://github.com/Lokhy87</perfil>
+        </redes_sociales>
     </otros_datos>
     <formacion>
         <titulacion>
@@ -52,29 +69,29 @@
         </titulacion>
     </formacion>
     <idiomas>
-        <idioma tipo='Materno'>
+        <idioma materno = 'true'>
             <nombre>Castellano</nombre>
-            <nivel_expresion_oral>Alto</nivel_expresion_oral>
-            <nivel_comprension_oral>Alto</nivel_comprension_oral>
-            <nivel_expresion_escrita>Alto</nivel_expresion_escrita>
+            <expresion_oral>Alto</expresion_oral>
+            <comprension_oral>Alto</comprension_oral>
+            <expresion_escrita>Alto</expresion_escrita>
         </idioma>
-        <idioma tipo='No materno'>
+        <idioma materno = 'false'>
             <nombre>Inglés</nombre>
-            <nivel_expresion_oral>Medio</nivel_expresion_oral>
-            <nivel_comprension_oral>Medio</nivel_comprension_oral>
-            <nivel_expresion_escrita>Medio</nivel_expresion_escrita>
+            <expresion_oral>Medio</expresion_oral>
+            <comprension_oral>Medio</comprension_oral>
+            <expresion_escrita>Medio</expresion_escrita>
         </idioma>
-        <idioma tipo='Materno'>
+        <idioma materno = 'true'>
             <nombre>Valenciano</nombre>
-            <nivel_expresion_oral>Alto</nivel_expresion_oral>
-            <nivel_comprension_oral>Alto</nivel_comprension_oral>
-            <nivel_expresion_escrita>Medio</nivel_expresion_escrita>
+            <expresion_oral>Alto</expresion_oral>
+            <comprension_oral>Alto</comprension_oral>
+            <expresion_escrita>Medio</expresion_escrita>
         </idioma>
-        <idioma tipo='No materno'>
+        <idioma materno = 'false'>
             <nombre>Italiano</nombre>
-            <nivel_expresion_oral>Medio</nivel_expresion_oral>
-            <nivel_comprension_oral>Medio</nivel_comprension_oral>
-            <nivel_expresion_escrita>Medio</nivel_expresion_escrita>
+            <expresion_oral>Medio</expresion_oral>
+            <comprension_oral>Medio</comprension_oral>
+            <expresion_escrita>Medio</expresion_escrita>
         </idioma>
     </idiomas>
     <experiencia_laboral>
@@ -86,7 +103,11 @@
                 <mes>Noviembre</mes> 
                 <año>2023</año>
             </inicio_contrato>
-            <final_contrato>Puesto actual</final_contrato>
+            <final_contrato>
+                <dia></dia>
+                <mes></mes> 
+                <año></año>
+            </final_contrato>
         </empresa>
         <empresa>
             <nombre>TennisTrainer</nombre>
@@ -129,13 +150,12 @@
         <aficiones>
             <nombre>Deportes</nombre>
         </aficiones>
-        <disponibilidad_viajar>
-            <vehiculo_propio></vehiculo_propio>
-            <permisos>
-                <nombre>B</nombre>
-                <nombre>C</nombre>
-                <nombre>C+E</nombre>
-            </permisos>
-        </disponibilidad_viajar>
+        <disponibilidad_viajar>Si</disponibilidad_viajar>
+        <vehiculo_propio>Si</vehiculo_propio>
+        <permisos>
+            <nombre licencia = 'B1'>Coche</nombre>
+            <nombre licencia = 'C'>Camion</nombre>
+            <nombre licencia = 'C+E'>Trailer</nombre>
+        </permisos>
     </datos_adicionales>
 </curriculum>
