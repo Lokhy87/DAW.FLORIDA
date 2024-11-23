@@ -28,10 +28,12 @@ xsi:noNamespaceSchemaLocation="alberto_bolta.xsd">
             <provincia>Valencia</provincia>
             <municipio>Mislata</municipio>
         </domicilio>
+        
         <correo_electronico>
             <email uso = 'personal'>a.bolta@gmail.com</email>
             <email uso = 'profesional'>a.bolta@alfatrainers.com</email>
         </correo_electronico>
+        
         <telefonos>
             <telefono tipo = 'movil'>622363288</telefono>
             <telefono tipo = 'fijo'></telefono>

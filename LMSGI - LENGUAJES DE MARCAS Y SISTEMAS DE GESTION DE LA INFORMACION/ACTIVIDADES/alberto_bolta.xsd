@@ -4,7 +4,7 @@
     <xs:complexType>
       <xs:sequence>
         
-        <xs:element name="datos_personales">
+         <xs:element name="datos_personales">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="nombre" type="xs:string"/>
@@ -13,7 +13,7 @@
                 <xs:complexType>
                   <xs:sequence>
                     <xs:element name="dia" type="xs:positiveInteger"/>
-                    <xs:element name="mes" type="xs:positiveInteger"/>
+                    <xs:element name="mes" type="xs:string"/>
                     <xs:element name="año" type="xs:positiveInteger"/>
                   </xs:sequence>
                 </xs:complexType>
@@ -24,8 +24,8 @@
               <xs:element name="foto" type="xs:string"/>
             </xs:sequence>
           </xs:complexType>
-        </xs:element>
-
+        </xs:element> 
+        
         <xs:element name="datos_direccion_contacto">
           <xs:complexType>
             <xs:sequence>
@@ -35,8 +35,8 @@
                     <xs:element name="tipo_via" type="xs:string"/>
                     <xs:element name="nombre_via" type="xs:string"/>
                     <xs:element name="numero" type="xs:positiveInteger"/>
-                    <xs:element name="piso" type="xs:string"/>
-                    <xs:element name="puerta" type="xs:int"/>
+                    <xs:element name="piso" type="xs:string" minOccurs="0"/>
+                    <xs:element name="puerta" type="xs:string" minOccurs="0"/>
                     <xs:element name="codigo_postal" type="xs:positiveInteger"/>
                     <xs:element name="pais" type="xs:string"/>
                     <xs:element name="provincia" type="xs:string"/>
@@ -64,7 +64,7 @@
               <xs:element name="telefonos">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="telefono" maxOccurs="unbounded">
+                    <xs:element name="telefono" maxOccurs="unbounded" minOccurs="0">
                       <xs:complexType>
                         <xs:simpleContent>
                           <xs:extension base="xs:string">
@@ -76,12 +76,18 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
 
-              <xs:element name="otros_datos">
+        <xs:element name="otros_datos">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="pagina_web" type="xs:string" minOccurs="0"/>
+              <xs:element name="redes_sociales" minOccurs="0">
                 <xs:complexType>
                   <xs:sequence>
-                    <xs:element name="pagina_web" type="xs:string"/>
-                    <xs:element name="redes_sociales">
+                    <xs:element name="perfil" maxOccurs="unbounded">
                       <xs:complexType>
                         <xs:simpleContent>
                           <xs:extension base="xs:string">
@@ -129,6 +135,7 @@
         </xs:element>
 
         <xs:element name="idiomas">
+        
           <xs:complexType>
             <xs:sequence>
               <xs:element name="idioma" maxOccurs="unbounded">
@@ -163,12 +170,12 @@
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
-                    <xs:element name="final_contrato">
+                    <xs:element name="final_contrato" minOccurs="0">
                       <xs:complexType>
                         <xs:sequence>
-                          <xs:element name="dia" type="xs:positiveInteger"/>
-                          <xs:element name="mes" type="xs:string"/>
-                          <xs:element name="año" type="xs:positiveInteger"/>
+                          <xs:element name="dia" type="xs:string" minOccurs="0"/>
+                          <xs:element name="mes" type="xs:string" minOccurs="0" />
+                          <xs:element name="año" type="xs:string" minOccurs="0" />
                         </xs:sequence>
                       </xs:complexType>
                     </xs:element>
@@ -178,6 +185,7 @@
             </xs:sequence>
           </xs:complexType>
         </xs:element>
+
 
         <xs:element name="competencias">
           <xs:complexType>
@@ -204,9 +212,8 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
-              <xs:element name="disponibilidad_viajar"/>
-              <xs:element name="vehiculo_propio" type="xs:string"/>
-
+              <xs:element name="disponibilidad_viajar" type="xs:string"/>
+              <xs:element name="vehiculo_propio" type="xs:string" minOccurs="0"/>
               <xs:element name="permisos">
                 <xs:complexType>
                   <xs:sequence>
@@ -222,7 +229,6 @@
                   </xs:sequence>
                 </xs:complexType>
               </xs:element>
-              
             </xs:sequence>
           </xs:complexType>
         </xs:element>
@@ -231,3 +237,4 @@
     </xs:complexType>
   </xs:element>
 </xs:schema>
+
