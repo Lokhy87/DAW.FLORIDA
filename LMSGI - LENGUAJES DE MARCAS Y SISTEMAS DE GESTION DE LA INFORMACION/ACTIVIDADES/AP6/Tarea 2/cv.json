@@ -1,0 +1,245 @@
+{
+   "curriculum": {
+      "datos_personales": {
+         "nombre": [
+            "Alberto"
+         ],
+         "apellidos": "Bolta Sanmateu",
+         "fecha_nacimiento": {
+            "dia": "08",
+            "mes": "01",
+            "año": "1987"
+         },
+         "lugar_nacimiento": "Gandia",
+         "nacionalidad": "España",
+         "dni": "53384069B",
+         "foto": "C:/Users/admin/OneDrive/Escritorio/FP/LMSGI - LENGUAJES DE MARCAS Y SISTEMAS DE GESTION DE LA INFORMACION/fotocarnet.png"
+      },
+      "datos_direccion_contacto": {
+         "domicilio": {
+            "tipo_via": "Plaza",
+            "nombre_via": "Ciudad de la Lisa",
+            "numero": "8",
+            "piso": "Entresuelo",
+            "puerta": "1",
+            "codigo_postal": "46920",
+            "pais": "España",
+            "provincia": "Valencia",
+            "municipio": "Mislata"
+         },
+         "correo_electronico": {
+            "email": [
+               {
+                  "_uso": "personal",
+                  "__text": "a.bolta@gmail.com"
+               },
+               {
+                  "_uso": "profesional",
+                  "__text": "a.bolta@alfatrainers.com"
+               }
+            ]
+         },
+         "telefonos": {
+            "telefono": [
+               {
+                  "_tipo": "movil",
+                  "__text": "622363288"
+               },
+               {
+                  "_tipo": "fijo"
+               }
+            ]
+         }
+      },
+      "otros_datos": {
+         "pagina_web": "",
+         "redes_sociales": {
+            "perfil": [
+               {
+                  "_nombre": "Linkedin",
+                  "__text": "https://www.linkedin.com/in/alberto-bolta-sanmateu-b43188306"
+               },
+               {
+                  "_nombre": "Repositorio",
+                  "__text": "https://github.com/Lokhy87"
+               }
+            ]
+         }
+      },
+      "formacion": {
+         "titulacion": [
+            {
+               "nombre": [
+                  "Licenciatura en Ciencias de la Actividad Fisica y el Deporte"
+               ],
+               "centro": "Universidad Catolica de Valencia",
+               "fecha_inicio": {
+                  "mes": "Septiembre",
+                  "año": "2005"
+               },
+               "fecha_finalizacion": {
+                  "mes": "Junio",
+                  "año": "2010"
+               }
+            },
+            {
+               "nombre": [
+                  "Bootcamp Data Science"
+               ],
+               "centro": "The Bridge",
+               "fecha_inicio": {
+                  "mes": "Febrero",
+                  "año": "2024"
+               },
+               "fecha_finalizacion": {
+                  "mes": "Agosto",
+                  "año": "2024"
+               }
+            }
+         ]
+      },
+      "idiomas": {
+         "idioma": [
+            {
+               "nombre": [
+                  "Castellano"
+               ],
+               "expresion_oral": "Alto",
+               "comprension_oral": "Alto",
+               "expresion_escrita": "Alto",
+               "_materno": "true"
+            },
+            {
+               "nombre": [
+                  "Inglés"
+               ],
+               "expresion_oral": "Medio",
+               "comprension_oral": "Medio",
+               "expresion_escrita": "Medio",
+               "_materno": "false"
+            },
+            {
+               "nombre": [
+                  "Valenciano"
+               ],
+               "expresion_oral": "Alto",
+               "comprension_oral": "Alto",
+               "expresion_escrita": "Medio",
+               "_materno": "true"
+            },
+            {
+               "nombre": [
+                  "Italiano"
+               ],
+               "expresion_oral": "Medio",
+               "comprension_oral": "Medio",
+               "expresion_escrita": "Medio",
+               "_materno": "false"
+            }
+         ]
+      },
+      "experiencia_laboral": {
+         "empresa": [
+            {
+               "nombre": [
+                  "Alfa Trainners"
+               ],
+               "puesto": "Entrenador personal",
+               "inicio_contrato": {
+                  "dia": "26",
+                  "mes": "Noviembre",
+                  "año": "2023"
+               },
+               "final_contrato": {
+                  "dia": {
+                     "_xsi:nil": "true"
+                  },
+                  "mes": {
+                     "_xsi:nil": "true"
+                  },
+                  "año": {
+                     "_xsi:nil": "true"
+                  }
+               }
+            },
+            {
+               "nombre": [
+                  "TennisTrainer"
+               ],
+               "puesto": "Preparador fisico y entrenador",
+               "inicio_contrato": {
+                  "dia": "10",
+                  "mes": "Julio",
+                  "año": "2013"
+               },
+               "final_contrato": {
+                  "dia": "1",
+                  "mes": "Junio",
+                  "año": "2021"
+               }
+            }
+         ]
+      },
+      "competencias": {
+         "competencia": [
+            {
+               "nombre": [
+                  "Liderazgo"
+               ],
+               "nivel": "2"
+            },
+            {
+               "nombre": [
+                  "Trabajo en equipo"
+               ],
+               "nivel": "5"
+            },
+            {
+               "nombre": [
+                  "Iniciativa"
+               ],
+               "nivel": "2"
+            },
+            {
+               "nombre": [
+                  "Creatividad"
+               ],
+               "nivel": "3"
+            },
+            {
+               "nombre": [
+                  "Autonomía"
+               ],
+               "nivel": "4"
+            }
+         ]
+      },
+      "datos_adicionales": {
+         "aficiones": {
+            "nombre": [
+               "Deportes"
+            ]
+         },
+         "disponibilidad_viajar": "Si",
+         "vehiculo_propio": "Si",
+         "permisos": {
+            "nombre": [
+               {
+                  "_licencia": "B1",
+                  "__text": "Coche"
+               },
+               {
+                  "_licencia": "C",
+                  "__text": "Camion"
+               },
+               {
+                  "_licencia": "C+E",
+                  "__text": "Trailer"
+               }
+            ]
+         }
+      },
+      "_xmlns:xsi": "http://www.w3.org/2001/XMLSchema-instance",
+      "_xsi:noNamespaceSchemaLocation": "alberto_bolta.xsd"
+   }
+}
