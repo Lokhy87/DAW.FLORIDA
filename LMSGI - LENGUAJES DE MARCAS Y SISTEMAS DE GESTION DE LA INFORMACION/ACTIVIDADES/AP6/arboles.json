@@ -1,0 +1,38 @@
+{
+    "Arboles": {
+        "Tipos de arboles": {
+            "Acer monspessulanum": {
+                "Nombre comun": "Arce de Montpellier, Arce menor",
+                "Vegetacion": "Caducifolio",
+                "Altura": "De 6 a 10 metros",
+                "Forma y estructura": "Copa esferica. Tronco principal recto con bifurcaciones. Ramaje colgante",
+                "Color en primavera": "Haz verde brillante, enves verde blanquecino", 
+                "Resistencia a las heladas": "Heladas fuertes (hasta -15 ºC)"
+            },
+            "Olea europea": {
+                "Nombre comun": "Olivo",
+                "Vegetacion": "Perenne",
+                "Altura": "De 8 a 15 metros",
+                "Forma y estructura": "Copa irregular. Tronco principal irregular con bifuraciones. Ramaje tortuoso",
+                "Color en primavera": "Haz verde oscuro, enves verde plateado",
+                "Resistencia a las heladas": "Heladas medias (hasta -10 ºC)"
+            },
+            "Platanus orientalis": {
+                "Nombre comun": "Platano",
+                "Vegetacion": "Caducifolio",
+                "Altura": "De 20 a 25 metro",
+                "Forma y estructura": "Copa ovoidal. Tronco principal recto. Ramaje expandido",
+                "Color en primavera": "Haz verde medio, enves verde claro",
+                "Resistencia a las heladas": "Heladas medias (hasta -20 ºC)"
+            },
+            "Quercus ilex": {
+                "Nombre comun": "Encina",
+                "Vegetacion": "Perenne",
+                "Altura": "En torno a 25 metros",
+                "Forma y estructura": "copa esferica o eliptica irregular. Tronco principal recto. Ramaje tortuoso",
+                "Color en primavera": "Plateado en hojas jovenes. En hojas antiguas, haz verde oscuro, enves plateado",
+                "Resistencia a las heladas": "Heladas fuertes (hasta -15 ºC)"
+            }
+        }
+    }
+}

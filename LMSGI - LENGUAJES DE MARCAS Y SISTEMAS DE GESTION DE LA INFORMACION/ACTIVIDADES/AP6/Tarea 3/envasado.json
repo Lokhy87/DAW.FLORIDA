@@ -1,0 +1,78 @@
+{
+    "Envasado": {
+        "Contenedores": {
+            "Grandes": {
+                "Descripcion": "Acepta envases grandes",
+                "Envases": {
+                    "Grande ancho": {
+                        "Liquidos": [
+                            "Aceite", 
+                            "Vinagre", 
+                            "Agua", 
+                            "Leche"
+                        ]
+                    },
+                    "Grande alto": {
+                        "Liquidos": [
+                            "Aceite", 
+                            "Vinagre", 
+                            "Agua", 
+                            "Leche"
+                        ]
+                    }
+                }
+            },
+            "Medianos": {
+                "Descripcion": "No acepta envases grandes",
+                "Envases": {
+                    "Mediano ancho": {
+                        "Liquidos": [
+                            "Aceite", 
+                            "Vinagre", 
+                            "Agua", 
+                            "Leche"
+                        ]
+                    },
+                    "Mediano alto": {
+                        "Liquidos": [
+                            "Aguarrás", 
+                            "Gasolina", 
+                            "Alcohol", 
+                            "Lejía",
+                            "Amoníaco", 
+                            "Jabón"
+                        ]
+                    }
+                }
+            },
+            "Verticales": {
+                "Descripcion": "Acepta envases altos",
+                "Envases": {
+                    "Grande alto": {
+                        "Liquidos": [
+                            "Aceite", 
+                            "Vinagre", 
+                            "Agua", 
+                            "Leche"
+                        ]
+                    }
+                }
+            },
+            "Pequeño": {
+                "Descripcion": "Resistente a sustancias corrosivas",
+                "Envases": {
+                    "Mediano alto": {
+                        "Liquidos": [
+                            "Aguarrás", 
+                            "Gasolina", 
+                            "Alcohol", 
+                            "Lejía",
+                            "Amoníaco", 
+                            "Jabón"
+                        ]
+                    }
+                }
+            }
+        }
+    }
+}

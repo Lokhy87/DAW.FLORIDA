@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Envasado>
+  <Contenedores>
+    <Grandes>
+      <Descripcion>Acepta envases grandes</Descripcion>
+      <Envases>
+        <Grande_ancho>
+          <Liquidos>Aceite</Liquidos>
+          <Liquidos>Vinagre</Liquidos>
+          <Liquidos>Agua</Liquidos>
+          <Liquidos>Leche</Liquidos>
+        </Grande_ancho>
+        <Grande_alto>
+          <Liquidos>Aceite</Liquidos>
+          <Liquidos>Vinagre</Liquidos>
+          <Liquidos>Agua</Liquidos>
+          <Liquidos>Leche</Liquidos>
+        </Grande_alto>
+      </Envases>
+    </Grandes>
+    <Medianos>
+      <Descripcion>No acepta envases grandes</Descripcion>
+      <Envases>
+        <Mediano_ancho>
+          <Liquidos>Aceite</Liquidos>
+          <Liquidos>Vinagre</Liquidos>
+          <Liquidos>Agua</Liquidos>
+          <Liquidos>Leche</Liquidos>
+        </Mediano_ancho>
+        <Mediano_alto>
+          <Liquidos>Aguarrás</Liquidos>
+          <Liquidos>Gasolina</Liquidos>
+          <Liquidos>Alcohol</Liquidos>
+          <Liquidos>Lejía</Liquidos>
+          <Liquidos>Amoníaco</Liquidos>
+          <Liquidos>Jabón</Liquidos>
+        </Mediano_alto>
+      </Envases>
+    </Medianos>
+    <Verticales>
+      <Descripcion>Acepta envases altos</Descripcion>
+      <Envases>
+        <Grande_alto>
+          <Liquidos>Aceite</Liquidos>
+          <Liquidos>Vinagre</Liquidos>
+          <Liquidos>Agua</Liquidos>
+          <Liquidos>Leche</Liquidos>
+        </Grande_alto>
+      </Envases>
+    </Verticales>
+    <Pequeño>
+      <Descripcion>Resistente a sustancias corrosivas</Descripcion>
+      <Envases>
+        <Mediano_alto>
+          <Liquidos>Aguarrás</Liquidos>
+          <Liquidos>Gasolina</Liquidos>
+          <Liquidos>Alcohol</Liquidos>
+          <Liquidos>Lejía</Liquidos>
+          <Liquidos>Amoníaco</Liquidos>
+          <Liquidos>Jabón</Liquidos>
+        </Mediano_alto>
+      </Envases>
+    </Pequeño>
+  </Contenedores>
+</Envasado>
