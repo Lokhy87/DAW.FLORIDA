@@ -1,0 +1,37 @@
+{
+    "SUPER HERO SQUAD": {
+        "Hometown": "Metro City", 
+        "Formed": 2016, 
+        "Members": {
+            "Molecule Man": {
+                "Secret identity": "Dan Jukee",
+                "Age": 29,
+                "Superpowers": [
+                    "Radiation resistance",
+                    "Turning tiny", 
+                    "Radiation blast"
+                ]
+            },
+            "Madame Uppercut": {
+                "Secret identity": "Jane Wilson",
+                "Age": 39,
+                "Superpowers": [
+                    "Million tonne punch",
+                    "Damage resistance", 
+                    "Superhuman reflexes"
+                ]
+            },
+            "Eternal Flame": {
+                "Secret identity": "Unknown",
+                "Age": 1000000,
+                "Superpowers": [
+                    "Inmortality",
+                    "Heat immunity", 
+                    "Inferno",
+                    "Teleportation",
+                    "Interdimensional travel"
+                ]
+            }
+        }
+    }
+}
