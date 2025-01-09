@@ -1,52 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
-
-<xs:simpleType name="tipoActor">
-    <xs:restriction base="xs:string">
-        <xs:enumeration value="ppal"/>
-        <xs:enumeration value="sec"/>
-    </xs:restriction>
-</xs:simpleType>
-
     <xs:element name="serie">
         <xs:complexType>
             <xs:sequence>
-                <xs:element name = "nombre" type="xs:string"/>
-                <xs:element name = "fecha_estreno" type="xs:date"/>
-                <xs:element name = "numero_temporadas">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:integer">
-                            <xs:minInclusive value="1"/>
-                            <xs:maxInclusive value="10"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name = "genero">
-                    <xs:simpleType>
-                        <xs:restriction base="xs:string">
-                            <xs:enumeration value="Comedia"/>
-                            <xs:enumeration value="Drama"/>
-                            <xs:enumeration value="Ciencia ficcion"/>
-                        </xs:restriction>
-                    </xs:simpleType>
-                </xs:element>
-                <xs:element name = "actores">
+                <xs:element name="nombre" type="xs:string" />
+                <xs:element name="fecha_estreno" type="xs:string" />
+                <xs:element name="numero_temporadas" type="xs:string" />
+                <xs:element name="genero" type="xs:string" />
+                <xs:element name="actores">
                     <xs:complexType>
                         <xs:sequence>
-                            <xs:element ref="actor" minOccurs="0" maxOccurs="unbounded"/>
+                            <xs:element name="actor" maxOccurs="unbounded">
+                                <xs:complexType>
+                                    <xs:simpleContent>
+                                        <xs:extension base="xs:string">
+                                            <xs:attribute name="tipo" use="required">
+                                                <xs:simpleType>
+                                                    <xs:restriction base="xs:string">
+                                                        <xs:enumeration value="ppal" />
+                                                        <xs:enumeration value="sec" />
+                                                    </xs:restriction>
+                                                </xs:simpleType>
+                                            </xs:attribute>
+                                        </xs:extension>
+                                    </xs:simpleContent>
+                                </xs:complexType>
+                            </xs:element>
                         </xs:sequence>
                     </xs:complexType>
                 </xs:element>
-                <xs:element name="director" type="xs:string"/>
+                <xs:element name="director" type="xs:string" />
             </xs:sequence>
         </xs:complexType>
     </xs:element>
-
-<xs:element name="actor">
-    <xs:complexType mixed="true">
-        <xs:attribute name="tipo" type="tipoActor"/>
-    </xs:complexType>
-</xs:element>
-
-
 </xs:schema>
