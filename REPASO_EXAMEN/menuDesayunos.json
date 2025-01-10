@@ -1,0 +1,23 @@
+{
+"Menu": [
+    {
+    "Nombre": "Gofres Belgas",
+    "Precio (en euros)": 5.95,
+    "Descripcion": "Dos de nuestros...",
+    "Calorias": 650
+    },
+    {
+        "Nombre": "Gofres Belgas con fresas",
+        "Precio (en euros)": 5.95,
+        "Descripcion": "Dos de nuestros...",
+        "Calorias": 650
+    },
+    {
+        "Nombre": "Gofres Belgas",
+        "Precio (en euros)": 5.95,
+        "Descripcion": "Dos de nuestros...",
+        "Calorias": 650
+    }
+        
+]
+}
