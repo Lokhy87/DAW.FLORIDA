@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+   
+    <xs:element name="expedientes">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element ref="expediente" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="expediente">
+        <xs:complexType>
+            <xs:sequence>
+                <xs:element name="titulacion"/>
+                <xs:element name="estudiante"/>
+                <xs:element ref="modulos" maxOccurs="unbounded"/>
+            </xs:sequence>
+        </xs:complexType>
+    </xs:element>
+
+    <xs:element name="modulos">
+        <xs:complexType>
+            <xs:attribute name="nombre"/>
+            <xs:attribute name="aprobado"/>
+            <xs:attribute name="curso"/>
+        </xs:complexType>
+    </xs:element>
+    
+</xs:schema>

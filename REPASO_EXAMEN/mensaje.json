@@ -1,0 +1,16 @@
+{
+"mensaje":{
+    "remitente":{
+        "nombre": "Alfredo Reino",
+        "email": "alf@bium.com"
+    },
+    "destinatario": {
+        "nombre": "Bill Clinton",
+        "email": "president@bium.com"
+    },
+    "asunto": "Hola Bill",
+    "texto":[
+        "hola que tal...."
+    ]
+}
+}
