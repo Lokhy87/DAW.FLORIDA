@@ -1,0 +1,237 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 19-02-2021 a las 19:52:51
+-- Versión del servidor: 10.4.16-MariaDB
+-- Versión de PHP: 7.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `veterinaria`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `clientes`
+--
+
+CREATE TABLE `clientes` (
+  `Dni` varchar(9) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Apellidos` varchar(50) DEFAULT NULL,
+  `Población` varchar(20) NOT NULL,
+  `Teléfono` varchar(9) NOT NULL,
+  `Edad` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `clientes`
+--
+
+INSERT INTO `clientes` (`Dni`, `Nombre`, `Apellidos`, `Población`, `Teléfono`, `Edad`) VALUES
+('12345432W', 'Rafa', 'Soriano Martínez', 'Valencia', '656569853', 50),
+('12345433W', 'Samuel', 'Martinez', 'Catarroja', '966569853', 30),
+('12345643D', 'Cris', 'Ferrer', 'Alaquas', '656229853', 48),
+('12546987S', 'Francisco', 'García Martínez', 'Alaquas', '966569852', 68),
+('15546987P', 'Carlos', 'Soria Cruz', 'Picanya', '', 80),
+('21485631F', 'Soledad', 'García Delgado', 'Valencia', '652569853', 45),
+('23456754D', 'Jose', 'Calvo', 'Torrent', '', 65),
+('25685631F', 'Mónica', 'Morales Delgado', 'Torrent', '611569852', 35),
+('34567823D', 'Amparo', 'Canos', 'Catarroja', '698885985', 56),
+('34567898D', 'Carlos', 'Perez', 'Valencia', '', 56),
+('35685631F', 'Carmen', 'Aguas Santos', 'Alaquas', '698885922', 37),
+('62685631F', 'José', 'Casa Santos', 'Alaquas', '', 24),
+('66546987S', 'Martín', 'García Martínez', 'Torrent', '696969852', 38),
+('98546987S', 'Carlos', 'Cámara Cruz', 'Picanya', '622569852', 25);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `consultas`
+--
+
+CREATE TABLE `consultas` (
+  `ID_Consulta` int(4) NOT NULL,
+  `Cod_Mascota` int(11) NOT NULL,
+  `Fecha` date NOT NULL,
+  `Cod_Tratamiento` int(4) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `consultas`
+--
+
+INSERT INTO `consultas` (`ID_Consulta`, `Cod_Mascota`, `Fecha`, `Cod_Tratamiento`) VALUES
+(1, 18, '2021-01-03', 3),
+(2, 6, '2020-11-05', 9),
+(3, 15, '2020-10-03', 4),
+(4, 11, '2020-11-05', 8),
+(5, 15, '2021-01-04', 3),
+(6, 14, '2021-01-05', 6),
+(7, 7, '2021-01-12', 6),
+(8, 12, '2020-09-05', 8),
+(9, 4, '2020-01-03', 9),
+(10, 16, '2021-01-05', 6),
+(11, 17, '2020-01-03', 6),
+(12, 14, '2020-09-05', 5),
+(13, 18, '2021-01-12', 5),
+(14, 1, '2020-11-05', 1),
+(15, 18, '2021-01-12', 1),
+(16, 8, '2021-10-25', 9),
+(17, 7, '2020-01-03', 6),
+(18, 5, '2021-10-25', 2),
+(19, 10, '2021-01-03', 2),
+(20, 14, '2020-09-05', 2),
+(21, 9, '2021-01-12', 4),
+(22, 13, '2020-11-05', 8);
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `mascotas`
+--
+
+CREATE TABLE `mascotas` (
+  `Codigo` int(11) NOT NULL,
+  `Nombre` varchar(50) DEFAULT NULL,
+  `Raza` varchar(50) DEFAULT NULL,
+  `Dni_Cliente` varchar(9) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `mascotas`
+--
+
+INSERT INTO `mascotas` (`Codigo`, `Nombre`, `Raza`, `Dni_Cliente`) VALUES
+(1, 'Sparky', 'Hamster', '12345432W'),
+(2, 'Sam', 'Gato', '34567823D'),
+(3, 'Kinder', 'Gato', '23456754D'),
+(4, 'Charly', 'perro', '12345643D'),
+(5, 'Pepe', 'Cobaya', '12345432W'),
+(6, 'Yasi', 'Cobaya', '12345432W'),
+(7, 'Dona', 'Perro', '12345433W'),
+(8, 'Pepito', 'Gato', '66546987S'),
+(9, 'Hulk', 'Perro', '15546987P'),
+(10, 'Chiqui', 'Hamster', '34567898D'),
+(11, 'Toby', 'Perro', '35685631F'),
+(12, 'Mickey', 'Perro', '66546987S'),
+(13, 'Luna', 'Perro', '23456754D'),
+(14, 'Picapica', 'Cobaya', '12345432W'),
+(15, 'Batman', 'Gato', '98546987S'),
+(16, 'Spiderman', 'Hamster', '98546987S'),
+(17, 'Grunch', 'Perro', '62685631F'),
+(18, 'Aquaman', 'Gato', '66546987S');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `tratamientos`
+--
+
+CREATE TABLE `tratamientos` (
+  `Cod_Tratamiento` int(4) NOT NULL,
+  `Descripción` varchar(25) NOT NULL,
+  `Precio` decimal(5,2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `tratamientos`
+--
+
+INSERT INTO `tratamientos` (`Cod_Tratamiento`, `Descripción`, `Precio`) VALUES
+(1, 'Revisión anual', '75.00'),
+(2, 'Vacuna', '60.00'),
+(3, 'Operación castrado', '200.00'),
+(4, 'Operación invasiva', '300.00'),
+(5, 'Herida', '40.99'),
+(6, 'Peluquería', '24.99'),
+(7, 'Tratamiento Cáncer', '360.00'),
+(8, 'Ecografía', '99.99'),
+(9, 'Placa', '150.00');
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `clientes`
+--
+ALTER TABLE `clientes`
+  ADD PRIMARY KEY (`Dni`);
+
+--
+-- Indices de la tabla `consultas`
+--
+ALTER TABLE `consultas`
+  ADD PRIMARY KEY (`ID_Consulta`),
+  ADD KEY `Cod_Mascota` (`Cod_Mascota`),
+  ADD KEY `Cod_Tratamiento` (`Cod_Tratamiento`);
+
+--
+-- Indices de la tabla `mascotas`
+--
+ALTER TABLE `mascotas`
+  ADD PRIMARY KEY (`Codigo`),
+  ADD KEY `mascotas_ibfk_1` (`Dni_Cliente`);
+
+--
+-- Indices de la tabla `tratamientos`
+--
+ALTER TABLE `tratamientos`
+  ADD PRIMARY KEY (`Cod_Tratamiento`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `consultas`
+--
+ALTER TABLE `consultas`
+  MODIFY `ID_Consulta` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=23;
+
+--
+-- AUTO_INCREMENT de la tabla `mascotas`
+--
+ALTER TABLE `mascotas`
+  MODIFY `Codigo` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT de la tabla `tratamientos`
+--
+ALTER TABLE `tratamientos`
+  MODIFY `Cod_Tratamiento` int(4) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `consultas`
+--
+ALTER TABLE `consultas`
+  ADD CONSTRAINT `consultas_ibfk_1` FOREIGN KEY (`Cod_Mascota`) REFERENCES `mascotas` (`Codigo`),
+  ADD CONSTRAINT `consultas_ibfk_2` FOREIGN KEY (`Cod_Tratamiento`) REFERENCES `tratamientos` (`Cod_Tratamiento`);
+
+--
+-- Filtros para la tabla `mascotas`
+--
+ALTER TABLE `mascotas`
+  ADD CONSTRAINT `mascotas_ibfk_1` FOREIGN KEY (`Dni_Cliente`) REFERENCES `clientes` (`Dni`) ON DELETE CASCADE;
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
