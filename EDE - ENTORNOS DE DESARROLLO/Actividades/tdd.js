@@ -15,13 +15,13 @@ function suma(a, b) {
 pruebaUnitaria();
 
 // Mejorar la prueba 
-function pruebaUnitaria(a, b, resultadoEsperado) {
-    const resultado = suma(3, 5);
+function pruebaMejorada(a, b, resultadoEsperado) {
+    const resultado = suma(a, b);
     if (resultado !== resultadoEsperado) {
-        throw new Error(`La prueba unitaria falló: se esperaba ${resultadoEsperado} pero se obtuvo ${resultado}`);
+        throw new Error(`La prueba mejorada falló: se esperaba ${resultadoEsperado} pero se obtuvo ${resultado}`);
     }
-    console.log(`La prueba unitaria pasó correctamente: ${a} + ${b} = ${resultado}`);
+    console.log(`La prueba mejorada pasó correctamente: ${a} + ${b} = ${resultado}`);
 }
 
-pruebaUnitaria(3, 5, 10);
+pruebaMejorada(3, 5, 10);
 
