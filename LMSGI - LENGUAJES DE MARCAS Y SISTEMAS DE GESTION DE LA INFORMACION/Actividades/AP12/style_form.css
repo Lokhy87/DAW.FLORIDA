@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    max-width: 350px;
+    margin: 20px auto;
+    padding: 20px;
+}
+
+form {
+    border: 1px solid black;
+    padding: 15px;
+    width: 320px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 14px;
+    margin-bottom: 10px;
+}
+
+label {
+    font-size: 12px;
+    margin-bottom: 1px;
+    display: block;
+}
+
+input {
+    font-size: 14px;
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 1px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+form label[for="email"] {
+    font-size: 14px;
+    font-weight: bold; 
+    margin-bottom: 1px;
+}
+
+button {
+    background-color: grey;
+    color: black;
+    border: none;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    border-radius: 3px;
+    display: block;
+    align-items: center;
+    margin-left: auto;
+    margin-top: 10px;
+}
+
+.links-container {
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    width: 200px;
+    padding: 10px;
+    border: 1px solid black;
+    background: white;
+}
+
+.links-container ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.links-container li {
+    margin-bottom: 10px;
+}
+
+.links-container a {
+    text-decoration: none;
+    color: #CC0000;
+    font-weight: bold;
+    display: block;
+    padding: 5px;
+}
+
+.links-container a:hover {
+    background-color: #CC0000;
+    color: #FFF;
+}
+
+.links-container a:visited {
+    color: #CCC /* No me cambia */
+}
