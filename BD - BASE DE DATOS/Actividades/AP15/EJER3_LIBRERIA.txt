@@ -1,0 +1,166 @@
+-- phpMyAdmin SQL Dump
+-- version 5.0.4
+-- https://www.phpmyadmin.net/
+--
+-- Servidor: 127.0.0.1
+-- Tiempo de generación: 22-04-2021 a las 14:53:20
+-- Versión del servidor: 10.4.16-MariaDB
+-- Versión de PHP: 7.4.12
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Base de datos: `libreria`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `compras`
+--
+
+CREATE TABLE `compras` (
+  `COD_COMPRA` int(4) NOT NULL,
+  `COD_LIBRO` int(11) NOT NULL,
+  `CANTIDAD` int(2) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `editorial`
+--
+
+CREATE TABLE `editorial` (
+  `Cod_Editorial` int(3) NOT NULL,
+  `Nombre` varchar(20) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `editorial`
+--
+
+INSERT INTO `editorial` (`Cod_Editorial`, `Nombre`) VALUES
+(1, 'Planeta'),
+(2, 'Anaya'),
+(3, 'Espasa'),
+(4, 'Destino'),
+(5, 'Debate'),
+(6, ' Beascoa'),
+(7, 'Herder'),
+(8, 'Ediciones B');
+
+-- --------------------------------------------------------
+
+--
+-- Estructura de tabla para la tabla `libros`
+--
+
+CREATE TABLE `libros` (
+  `Cod_Libro` int(11) NOT NULL,
+  `Título` varchar(40) NOT NULL,
+  `Cod_Editorial` int(3) NOT NULL,
+  `Año_Edicion` int(4) NOT NULL,
+  `Precio` decimal(5,2) NOT NULL,
+  `Autor` varchar(30) NOT NULL,
+  `STOCK` int(3) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Volcado de datos para la tabla `libros`
+--
+
+INSERT INTO `libros` (`Cod_Libro`, `Título`, `Cod_Editorial`, `Año_Edicion`, `Precio`, `Autor`, `STOCK`) VALUES
+(1, 'MI PRIMER ELMER', 6, 2018, '10.40', 'DAVID MCKEE', 5),
+(2, 'REY BLANCO', 8, 2020, '19.85', 'JUAN GOMEZ-JURADO', 10),
+(3, 'DELPARAÍSO', 3, 2021, '18.90', 'JUAN DEL VAL', 14),
+(4, 'UNA TIERRA PROMETIDA', 5, 2020, '26.50', 'BARACK OBAMA', 14),
+(5, 'LOS PRIVILEGIOS DEL ANGEL', 4, 2021, '12.50', 'DOLORES REDONDO', 25),
+(6, 'EL BOSQUE DE LOS CUATRO VIENTOS', 4, 2020, '17.50', 'MARIA ORUÑA', 2),
+(7, 'AQUITANIA', 1, 2020, '20.99', 'EVA GARCIA SAENZ DE URTURI', 4),
+(8, 'REINA ROJA', 8, 2018, '15.60', 'JUAN GOMEZ-JURADO', 10),
+(9, 'SIRA', 1, 2021, '22.50', 'MARIA DUEÑAS', 12),
+(10, 'ELMER', 6, 2017, '14.50', 'DAVID MCKEE', 8),
+(11, 'EL TIEMPO ENTRE COSTURAS', 1, 2016, '15.90', 'MARIA DUEÑAS', 6),
+(12, 'LAS HIJAS DEL CAPITÁN', 1, 2019, '12.30', 'MARIA DUEÑAS', 8),
+(13, 'LA REINA SOLA', 1, 2021, '21.00', 'JORGE MOLIST', 9),
+(14, 'LAS HIJAS DEL CAPITÁN', 1, 2019, '12.30', 'MARIA DUEÑAS', 7),
+(15, ' EL ARTE DE SER FELIZ', 7, 2016, '12.25', 'ARTHUR SCHOPENHAUER', 3),
+(16, 'EL CONQUISTADOR', 8, 2020, '21.75', 'JOSE LUIS CORRAL', 2),
+(17, 'EL DESORDEN QUE DEJAS', 3, 2017, '14.89', 'CARLOS MONTERO', 10),
+(18, 'LA CARA NORTE DEL CORAZON', 4, 2019, '20.85', 'DOLORES REDONDO', 18);
+
+--
+-- Índices para tablas volcadas
+--
+
+--
+-- Indices de la tabla `compras`
+--
+ALTER TABLE `compras`
+  ADD PRIMARY KEY (`COD_COMPRA`),
+  ADD KEY `compras_ibfk_1` (`COD_LIBRO`);
+
+--
+-- Indices de la tabla `editorial`
+--
+ALTER TABLE `editorial`
+  ADD PRIMARY KEY (`Cod_Editorial`);
+
+--
+-- Indices de la tabla `libros`
+--
+ALTER TABLE `libros`
+  ADD PRIMARY KEY (`Cod_Libro`),
+  ADD KEY `Cod_Editorial` (`Cod_Editorial`);
+
+--
+-- AUTO_INCREMENT de las tablas volcadas
+--
+
+--
+-- AUTO_INCREMENT de la tabla `compras`
+--
+ALTER TABLE `compras`
+  MODIFY `COD_COMPRA` int(4) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT de la tabla `editorial`
+--
+ALTER TABLE `editorial`
+  MODIFY `Cod_Editorial` int(3) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+
+--
+-- AUTO_INCREMENT de la tabla `libros`
+--
+ALTER TABLE `libros`
+  MODIFY `Cod_Libro` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- Restricciones para tablas volcadas
+--
+
+--
+-- Filtros para la tabla `compras`
+--
+ALTER TABLE `compras`
+  ADD CONSTRAINT `compras_ibfk_1` FOREIGN KEY (`COD_LIBRO`) REFERENCES `libros` (`Cod_Libro`) ON DELETE CASCADE ON UPDATE CASCADE;
+
+--
+-- Filtros para la tabla `libros`
+--
+ALTER TABLE `libros`
+  ADD CONSTRAINT `libros_ibfk_1` FOREIGN KEY (`Cod_Editorial`) REFERENCES `editorial` (`Cod_Editorial`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
