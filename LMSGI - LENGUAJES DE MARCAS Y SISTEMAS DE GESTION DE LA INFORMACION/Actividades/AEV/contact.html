@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="cv_style.css">
 </head>
 <body>
     <!-- Header con logo y navegación -->
@@ -17,6 +18,19 @@
             </ul>
         </nav>
     </header>
+    
+    <!-- Formulario -->
+    <div id="formulario">
+        <h2>Formulario de contacto</h2>
+        <form action="enviar.php" method="post">
+            <label for="nombre">Nombre:</label><br>
+            <input type="text" id="nombre" name="nombre"><br><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email"><br><br>
+            <label for="mensaje">Mensaje:</label><br>
+            <textarea id="mensaje" name="mensaje"></textarea><br><br>
+            <input type="submit" value="Enviar">
+        </form>
     
 </body>
 </html>
