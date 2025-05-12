@@ -1,0 +1,290 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: rgb(248, 245, 245);
+    font-size: 20px;
+    margin: 0;
+    padding: 0; 
+}
+
+#cabecera {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    background-color: #fff; /* Fondo blanco como el ejemplo */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Sombra sutil */
+}
+
+#cabecera h4 {
+    color: #360dca; /* Color similar al nav anterior pero para el texto */
+    font-size: 28px;
+    font-weight: bold;
+    margin: 0; /* Eliminamos margen inferior */
+    text-transform: uppercase; /* Convertimos a mayúsculas como el ejemplo */
+}
+
+#pestañas ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    gap: 25px; /* Más espacio entre elementos */
+}
+
+#pestañas ul li a {
+    color: #333; /* Color oscuro para el texto */
+    text-decoration: none;
+    font-weight: 500;
+    padding: 5px 0;
+    position: relative;
+    transition: color 0.3s;
+}
+
+#pestañas ul li a:hover {
+    color: #d8a7a7; 
+}
+
+h1 {
+    color: #360dca; 
+    font-size: 40px;
+    margin: 40px 10px; 
+    text-align: center; 
+}
+
+#subtitulo {
+    color: #333; /* Color del subtítulo */
+    font-size: 24px;
+    margin-top: 10px;
+    text-align: center; /* Centrado del subtítulo */
+    margin-bottom: 30px; /* Espacio inferior */
+}
+
+.container {
+    display: flex;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.video-section, .sobremi-section {
+    flex: 1;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.video-container {
+    position: relative;
+    padding-bottom: 56.25%; 
+    height: 0;
+    overflow: hidden;
+}
+
+.video-container iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+h2 {
+    color: #333;
+    margin-top: 0;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 5px;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+    }
+}
+
+/* Bio */
+section {
+    flex: 1;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 25px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    margin: 30px 20px;
+}
+
+section h2 {
+    color: #333;
+    margin-top: 0;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+}
+
+/* Experiencia profesional */
+.trabajo {
+    margin-bottom:  20px;
+    padding: 15px;
+}
+
+.trabajo h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.compañia {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+/* Formación académica */
+.cursos {
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.curso h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+.centro {
+    font-weight: bold;
+    color: #555;
+    margin-bottom: 15px;
+}
+/* Habilidades */
+.categoria {
+    margin-bottom: 30px;
+    padding: 15px;
+}
+
+.categoria h3 {
+    color: #3498db;
+    margin-bottom: 15px;
+    font-size: 18px;
+}
+
+/* Título del formulario */
+#formulario h2 {
+    color: #2c3e50;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    font-size: 28px;
+    text-align: center;
+}
+/* Formulario */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Centrar todos los elementos hijos */
+    gap: 1px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+label {
+    margin-bottom: 1px;
+    font-weight: bold;
+    color: #333;
+    width: 90%; /* Mismo ancho que los inputs */
+    text-align: left; /* Alinear texto a la izquierda */
+}
+
+input[type="text"],
+input[type="email"], 
+textarea {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    width: 90%;
+    box-sizing: border-box;
+    display: block; /* Asegurar que ocupan todo el ancho disponible */
+    margin: 0 auto; /* Centrar horizontalmente */
+}
+
+textarea {
+    min-height: 100px;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    margin-top: 10px;
+    width: auto; /* Ancho según contenido */
+}
+
+/* Sección Descarga CV */
+#descarga-cv {
+    max-width: 500px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    text-align: center;
+}
+
+#descarga-cv h2 {
+    color: #2c3e50;
+    margin-top: 0;
+    padding-bottom: 15px;
+    border-bottom: 2px solid #eee;
+    font-size: 24px;
+}
+
+.boton-descarga {
+    margin: 20px 0;
+}
+
+.boton-descarga a {
+    display: inline-flex;
+    align-items: center;
+    gap: 20px;
+    padding: 12px 25px;
+    background-color: #3498db;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.boton-descarga a:hover {
+    background-color: #2980b9;
+}
+
+.nota {
+    font-size: 10px;
+    color: #7f8c8d;
+    margin-top: 15px;
+}
+
+.nota a {
+    color: #3498db;
+    text-decoration: none;
+}
+
+.nota a:hover {
+    text-decoration: underline;
+}
+
+
