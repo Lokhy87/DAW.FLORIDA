@@ -36,24 +36,4 @@ class Lamp {
     public function getZone() {
         return $this->zone;
     }
-    
-    // Setters
-    public function setId($id) {
-        $this->id = $id;
-    }
-    public function setName($name) {
-        $this->name = $name;
-    }
-    public function setStatus($status) {
-        $this->status = $status;
-    }
-    public function setModele($model) {
-        $this->model = $model;
-    }
-    public function setPower($power) {
-        $this->power = $power;
-    }
-    public function setZone($zone) {
-        $this->zone = $zone;
-    }
 }

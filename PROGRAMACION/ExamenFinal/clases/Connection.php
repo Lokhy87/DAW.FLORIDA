@@ -7,11 +7,14 @@ class Connection {
     protected $conn;
     private $configFile = "conf.json";
 
+    // Constructor
     public function __construct() {
         $this->loadConfig();
         $this->conn = $this->connect();
     }
+    // Carglo los datos de configuracion desde un archivo externo y establezco conexion.
 
+    // Carga de datos desde Json
     private function loadConfig() {
         if (!file_exists($this->configFile)) {
             die("Archivo de configuración no encontrado.");
@@ -22,12 +25,14 @@ class Connection {
             die("Error al leer el archivo de configuración.");
         }
 
+        // Asignar valores a propiedades
         $this->host = $config['host'];
         $this->user = $config['user'];
         $this->pass = $config['pass'];
         $this->dbname = $config['dbname'];
     }
 
+    // Establecer la conexcion PDO con las base de datos
     public function connect() {
         if ($this->conn === null) {
             try {
@@ -40,4 +45,5 @@ class Connection {
         }
         return $this->conn;
     }
+    // Devuelve la conexion PDO, asegura que solo se cree una vez. Captura erroresde conexion con try/catch
 }
