@@ -1,6 +1,14 @@
 <?php
+session_start();
+
 require_once 'autoload.php';
 
+// Guarda el filtro recibido
+if (isset($_POST['filter'])) {
+    $_SESSION['filter'] = $_POST['filter'];
+}
+
+// Nuevo objeto de la clase
 $lighting = new Lighting();
 ?>
 
@@ -74,31 +82,20 @@ $lighting = new Lighting();
 </head>
 
 <body>
-    <div class="center">
-        <h1>BIG STADIUM - LIGHTING CONTROL PANEL</h1>
+<div class="center">
+    <h1>BIG STADIUM - LIGHTING CONTROL PANEL</h1>
 
-        <!-- Mostrar potencia total -->
-        <div class="power-display">
-            Potencia total encendida: <?php echo $lighting->getPowerZone(); ?> W
-        </div>
-        
-        <!-- Tabla con lámparas -->
-        <table style="width:100%; text-align:center;">
-            <thead>
-                <tr>
-                    <th>ID</th>
-                    <th>Nombre</th>
-                    <th>Estado</th>
-                    <th>Modelo</th>
-                    <th>Potencia</th>
-                    <th>Zona</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php $lighting->drawLampsList(); ?>
-            </tbody>
-        </table>
+    <!-- Mostrar el formulario de zonas -->
+    <?php $lighting->drawZonesOptions(); ?><br>
+
+    <!-- Mostrar potencia total -->
+    <div class="power-display">
+        Potencia total encendida: <?php echo $lighting->getPowerZone(); ?> 
     </div>
+    
+    <!-- Mostrar el listado de lamparas -->
+    <?php $lighting->drawLampsList(); ?>
+</div>
 </body>
 
 </html>

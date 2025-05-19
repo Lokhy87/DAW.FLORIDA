@@ -1,5 +1,5 @@
 {
-    "host": "localhost",
+    "host": "db",
     "user": "root",
     "pass": "test",
     "dbname": "stadium"
