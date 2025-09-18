@@ -1,0 +1,1 @@
+let nutrition = document.getElementsByClassName('nutricion'); 
