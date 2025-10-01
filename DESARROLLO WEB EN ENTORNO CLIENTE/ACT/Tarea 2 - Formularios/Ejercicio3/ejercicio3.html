@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tarea 2 - Formularios</title>
+    <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+<body>
+    <div class="container">
+        <div class="login-box">
+
+            <div class="login-name">
+                <h1>Ejercicio 3</h1>
+            </div>
+
+            <form action="">
+
+                <div class="input-box">
+
+                    <div class="inputs">
+                        <input type="text" id="nickname" placeholder="Nickname" />
+                        <div class="underline-input"></div>
+
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="film" placeholder="Película" />
+                        <div class="underline-input"></div>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="year" placeholder="Año" />
+                        <div class="underline-input"></div>
+                    </div>
+                    <div class="inputs">
+                        <input type="text" id="director"  placeholder="Director" />
+                        <div class="underline-input"></div>
+                    </div>
+                    <div class="inputs">
+                        <select name="category" id="category">
+                            <option value="">- Calificación -</option>
+                            <option value="4">Aburrida</option>
+                            <option value="5">Ni fu ni fa</option>
+                            <option value="6">Pasable</option>
+                            <option value="7">No está mal</option>
+                            <option value="8">Buena</option>
+                            <option value="9">La recomiendo</option>
+                            <option value="10">Mi peli preferida</option>
+                        </select>
+                    </div>
+                    <div class="inputs">
+                        <p>Número de pelis que veo a la semana:</p>
+                    </div>
+                    <div class="inputs">
+                        <input type="radio" id="frequency-low" name="frequency" checked>
+                        <label for="frequency-low">Una ó ninguna</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="radio" id="frequency-normal" name="frequency">
+                        <label for="frequency-normal">Dos ó tres</label>
+                    </div>
+                    <div class="inputs">
+                        <input type="radio" id="frequency-high" name="frequency">
+                        <label for="frequency-high">Cuatro ó más</label>
+                    </div>
+
+                    <div>
+                        <textarea id="message" placeholder="Escribe tú reseña..." rows="4"></textarea>
+                    </div>
+                    <div class="inputs"></div>
+                        <input type="checkbox" id="human" name="human" >
+                        <label for="human">No soy un robot</label>
+                    </div>
+                    <div class="submit-button">
+                        <input type="submit" value="Enviar">
+                    </div>
+                </div>
+                
+            </form>
+        </div>
+    </div>
+    <p></p>
+    <script src="ejercicio3.js"></script>
+</body>
+</html>
