@@ -1,13 +1,12 @@
+// Variables globales 
 let botones = document.querySelectorAll('.category');
-
-// let contenedor = document.querySelector('.series');
-
-// let contenedor2 = document.querySelector('.peliculas');
-
 let desc = document.getElementsByClassName('description')[0];
 let nombre = desc.querySelector('h2');
 let actor = desc.querySelector('h3');
+let titulo = document.querySelector('.cat');
 
+// Arrays
+// Series
 let series = [
 {
     nombre: 'Los Soprano',
@@ -37,7 +36,7 @@ let series = [
     ]
 }
 ];
-
+// Peliculas 
 let peliculas = [
 {
     nombre: 'Avengers',
@@ -68,15 +67,13 @@ let peliculas = [
 }
 ];
 
+// Variables Actuales e Indices 
 let serieActual = series[0];
 let peliculaActual = peliculas[0];
 
 let indiceSerie = 0;
 let indicePeliculas = 0;
-
 let indice = 0;
-
-let titulo = document.querySelector('.cat');
 
 let categoriaActual = 'series';
 
@@ -101,7 +98,6 @@ botones.forEach(boton => {
     }
     })
 })
-
 
 // Botones interiores 
 let botonesInterior = document.querySelectorAll('.one .book a');
