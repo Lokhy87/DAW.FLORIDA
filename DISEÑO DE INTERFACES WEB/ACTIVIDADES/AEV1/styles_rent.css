@@ -41,9 +41,10 @@ header {
 
 .main-nav ul {
     list-style: none;
-    margin: 2px 0 0 0;
+    margin: 0;
     padding: 0;
     display: flex;        
+    justify-content: space-around;
     align-items: center;
 }
 
@@ -69,29 +70,21 @@ header {
 }
 
 /* Main */
-section {
-    width: 90%;
-    margin: 2rem auto;
+#contenido {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  gap: 20px;
 }
-section h3 {
-    font-size: 26px;
-    background-color: #e63946; /* rojo más deportivo */
-    color: white;
-    padding: 0.8rem 1rem;
-    border-radius: 4px; 
-    margin-bottom: 1rem;
-}
-
-.bloque {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
-    gap: 15px; 
-}
-
-.bloque img {
-    width: 20%;
-    border-radius: 6px;
+.producto {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 16px;
 }
 
 /* Footer */
