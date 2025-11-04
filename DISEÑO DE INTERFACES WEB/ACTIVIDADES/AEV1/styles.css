@@ -1,0 +1,64 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    width: 100;
+    background-color: #2f4f59;
+    color: white;
+    padding: 1rem 0;
+}
+
+.title-subtitle {
+    text-align: center;
+    padding-bottom: .5rem;
+}
+
+.title-subtitle h1 {
+    font-family: sans-serif;
+    font-size: 40px;
+    margin: 0;
+}
+
+.title-subtitle h2 {
+    font-family: sans-serif;
+    font-size: 20px;
+    margin: 4px 0 0 0;
+    
+}
+
+.main-nav {
+    background-color: #2f4f59;
+    width: 100%;
+}
+
+.main-nav ul {
+    list-style: none;
+    margin: 1rem 0 0 0;
+    padding: 0;
+    display: flex;        
+    justify-content: space-around;
+    align-items: center;
+}
+
+.main-nav li {
+    flex: 1;
+    text-align: center;
+}
+
+.main-nav a {
+    font-family: sans-serif;
+    text-decoration: none;
+    font-size: 16px;
+    color: white;
+    padding-bottom: 3px;
+    position: relative;
+    display: block;
+    padding: 4px; 
+}
+
+.main-nav a:hover {
+    background-color: white;
+    color: black;
+}
