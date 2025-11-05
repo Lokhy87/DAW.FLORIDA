@@ -7,35 +7,47 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
+    <header> 
+        <div class="idiomas">
+            <button onclick="setLang('es')">ES</button>
+            <button onclick="setLang('val')">VAL</button>
+        </div>
+
         <div class="title-subtitle">
             <h1>BicisVal</h1>
-            <h2>Tu tienda de confianza en bicicletas, alquiler y reparaciones</h2>
+            <h2 data-i18n="home.subtitle">Tu tienda de confianza en bicicletas, alquiler y reparaciones</h2>
         </div>
 
         <nav class="main-nav">
             <ul>
-                <li><a href="venta.html">Venta</a></li>
-                <li><a href="alquiler.html">Alquiler</a></li>
-                <li><a href="taller.html">Taller</a></li>
+                <li><a href="venta.html" data-i18n="nav.venta">Venta</a></li>
+                <li><a href="alquiler.html" data-i18n="nav.alquiler">Alquiler</a></li>
+                <li><a href="taller.html" data-i18n="nav.taller">Taller</a></li>
             </ul>
         </nav>
     </header>
 
+    <div class="galeria-portada">
+        <img src="images/portada.jpg" alt="imagen portada index">
+        <img src="images/portada2.jpg" alt="imagen portada2 index">
+        <img src="images/portada3.jpg" alt="imagen portada3 index">
+        <img src="images/portada4.jpg" alt="imagen portada4 index">
+    </div>
+   
     <main id="contenido">
         <section class="quienes-somos">
-            <h3>¿Quiénes somos?</h3>
+            <h3 data-i18n="home.quienessomos">¿Quiénes somos?</h3>
             
             <div class="bloque">
                 <img src="images/logo1.png" alt="Logo quienes somos">
 
                 <div class="texto">
-                    <p>
+                    <p data-i18n="home.quienessomos.parrafo1">
                     BicisVal nació como un pequeño negocio familiar en el corazón de Valencia, fruto de una gran pasión por el ciclismo y la movilidad sostenible. 
                     Con más de una década de experiencia, nos hemos convertido en un punto de referencia para quienes disfrutan de moverse sobre dos ruedas, 
                     ya sea por deporte, ocio o compromiso con el medio ambiente.
                     </p>
-                    <p>
+                    <p data-i18n="home.quienessomos.parrafo2">
                     Nos gusta ofrecer un trato cercano y personalizado, ayudando a cada cliente a encontrar la bicicleta que mejor se adapta a su estilo de vida. 
                     Creemos en el trabajo bien hecho, en la confianza y en la satisfacción de ver a nuestros clientes volver con una sonrisa.
                     </p>
@@ -45,24 +57,42 @@
         </section>
 
         <section class="que-ofrecemos">
-            <h3>¿Qué ofrecemos?</h3>
+            <h3 data-i18n="home.queofrecemos">¿Qué ofrecemos?</h3>
 
             <div class="bloque">
                 <img src="images/alquiler.jpg" alt="Logo alquiler">
 
                 <div class="texto">
-                    <p>
+                    <p data-i18n="home.queofrecemos.intro">
                     En BicisVal encontrarás todo lo que necesitas para disfrutar de la bici en cualquier situación:
                     </p>
                     <ul>
-                        <li><strong>Venta:</strong> disponemos de hasta 10 modelos distintos de bicicletas, desde urbanas hasta de montaña, 
-                        seleccionadas por su calidad, diseño y durabilidad.</li>
-                        <li><strong>Alquiler:</strong> contamos con 4 modelos diferentes de bicicletas para alquiler por horas o días, 
-                        perfectas para descubrir Valencia de una forma cómoda y ecológica.</li>
-                        <li><strong>Taller:</strong> realizamos 8 tipos de reparaciones y mantenimientos, desde ajustes básicos 
-                        hasta restauraciones completas. Nuestro equipo técnico cuida cada detalle para que tu bici quede como nueva.</li>
+                        <li>
+                            <strong data-i18n="home.queofrecemos.sec1-titulo">Venta:</strong>
+                            <span data-i18n="home.queofrecemos.sec1-texto">
+                            disponemos de hasta 10 modelos distintos de bicicletas, desde urbanas hasta de montaña,
+                            seleccionadas por su calidad, diseño y durabilidad.
+                            </span>
+                        </li>
+
+                        <li>
+                            <strong data-i18n="home.queofrecemos.sec2-titulo">Alquiler:</strong>
+                            <span data-i18n="home.queofrecemos.sec2-texto">
+                            contamos con 4 modelos diferentes de bicicletas para alquiler por horas o días,
+                            perfectas para descubrir Valencia de una forma cómoda y ecológica.
+                            </span>
+                        </li>
+
+                        <li>
+                            <strong data-i18n="home.queofrecemos.sec3-titulo">Taller:</strong>
+                            <span data-i18n="home.queofrecemos.sec3-texto">
+                            realizamos 8 tipos de reparaciones y mantenimientos, desde ajustes básicos hasta restauraciones completas.
+                            Nuestro equipo técnico cuida cada detalle para que tu bici quede como nueva.
+                            </span>
+                        </li>
                     </ul>
-                    <p>
+
+                    <p data-i18n="home.queofrecemos.final">
                     Además, ofrecemos asesoramiento gratuito y revisiones rápidas sin cita previa. Tu bici y tu tiempo son nuestra prioridad.
                     </p>
                 </div>
@@ -70,22 +100,22 @@
         </section>
 
         <section class="ubicacion">
-            <h3>¿Dónde estamos?</h3>
+            <h3 data-i18n="home.dondeestamos">¿Dónde estamos?</h3>
 
             <div class="bloque">
                 <img src="images/ubic.jpg" alt="Ubicacion">
 
                 <div class="texto">
-                    <p>
+                    <p data-i18n="home.dondeestamos.parrafo1">
                     Nos encontramos en el centro de Valencia, en la Calle de la Paz, número 24. 
                     Nuestro local cuenta con un pequeño taller visible desde el escaparate y una zona de exposición con las últimas novedades en bicicletas.
                     </p>
-                    <p>
+                    <p data-i18n="home.dondeestamos.parrafo2">
                     Puedes ponerte en contacto con nosotros a través del teléfono 
                     <strong><a href="tel:+34963123456">963 123 456</a></strong> o escribiéndonos a
                     <strong><a href="mailto:info@bicisval.com">info@bicisval.com</a></strong>. 
                     </p>
-                    <p>¡Te atenderemos encantados!</p>
+                    <p data-i18n="home.dondeestamos.parrafo3">¡Te atenderemos encantados!</p>
                 </div>
             </div>
 
@@ -96,11 +126,12 @@
         <section class="footer-info">
             <h4>Contacto</h4>
             <address>
-                <p><strong>Dirección:</strong> Calle de la Paz, 24 - 46003 Valencia</p>
-                <p><strong>Teléfono:</strong> <a href="tel:+34963123456">963 123 456</a></p>
-                <p><strong>Email:</strong> <a href="mailto:info@bicisval.com">info@bicisval.com</a></p>
+                <p><strong data-i18n="contact.direccion">Dirección:</strong> Calle de la Paz, 24 - 46003 Valencia</p>
+                <p><strong data-i18n="contact.telefono">Teléfono:</strong> <a href="tel:+34963123456">963 123 456</a></p>
+                <p><strong data-i18n="contact.email">Email:</strong> <a href="mailto:info@bicisval.com">info@bicisval.com</a></p>
             </address>
         </section>
     </footer>
+    <script src="i18n.js"></script>
 </body>
 </html>

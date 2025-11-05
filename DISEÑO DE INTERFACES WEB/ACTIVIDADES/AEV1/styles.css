@@ -1,3 +1,5 @@
+/* Todas las paginas */
+
 html, body {
     margin: 0;
     padding: 0;
@@ -11,14 +13,14 @@ header {
     width: 100%;
     background-color: #2f4f59;
     color: white;
-    padding: 1rem 0;
+    padding: 16px 0;
 }
 
 .title-subtitle {
     text-align: center;
-    padding-bottom: .5rem;
+    padding-bottom: 8px;
     border-bottom: 1px solid white;
-    margin-bottom: .5rem; 
+    margin-bottom: 8px;
 }
 
 .title-subtitle h1 {
@@ -34,6 +36,25 @@ header {
 
 }
 
+/* Galería portada */
+.galeria-portada {
+  display: flex;
+  justify-content: center;
+  gap: 15px;            
+  width: 90%;
+  margin: 20px auto;
+}
+
+.galeria-portada img {
+  width: 24%;           
+  aspect-ratio: 16/9;   
+  object-fit: cover;    
+  border-radius: 6px;
+  display: block;
+}
+
+/* Navegador */
+
 .main-nav {
     background-color: #2f4f59;
     width: 100%;
@@ -41,10 +62,11 @@ header {
 
 .main-nav ul {
     list-style: none;
-    margin: 2px 0 0 0;
+    margin: 0;
     padding: 0;
-    display: flex;        
+    display: flex;
     align-items: center;
+    justify-content: space-around;
 }
 
 .main-nav li {
@@ -60,7 +82,7 @@ header {
     padding-bottom: 3px;
     position: relative;
     display: block;
-    padding: 10px 0; 
+    padding: 10px 0;
 }
 
 .main-nav a:hover {
@@ -68,40 +90,15 @@ header {
     color: black;
 }
 
-/* Main */
-section {
-    width: 90%;
-    margin: 2rem auto;
-}
-section h3 {
-    font-size: 26px;
-    background-color: #e63946; /* rojo más deportivo */
-    color: white;
-    padding: 0.8rem 1rem;
-    border-radius: 4px; 
-    margin-bottom: 1rem;
-}
 
-.bloque {
-    display: flex;
-    align-items: center;
-    margin-top: 12px;
-    gap: 15px; 
-}
-
-.bloque img {
-    width: 20%;
-    border-radius: 6px;
-}
-
-/* Footer */
+/* Footer comun */
 footer {
     width: 100%;
-    background-color: #2f4f59; 
+    background-color: #2f4f59;
     color: white;
     text-align: center;
-    padding: 1.5rem 0;
-    margin-top: 3rem;
+    padding: 24px 0;
+    margin-top: 48px;
 }
 
 footer h4 {
@@ -111,7 +108,7 @@ footer h4 {
 }
 
 footer address {
-    font-style: normal; 
+    font-style: normal;
     line-height: 1.6;
     font-family: sans-serif;
     margin: 0;
@@ -125,3 +122,93 @@ footer a {
 footer a:hover {
     text-decoration: underline;
 }
+
+/* Index */
+section {
+    width: 90%;
+    margin: 32px auto;
+}
+section h3 {
+    font-size: 26px;
+    background-color: #e63946;
+    color: white;
+    padding: 13px 16px;
+    border-radius: 4px;
+    margin-bottom: 16px;
+}
+
+.quienes-somos .bloque,
+.que-ofrecemos .bloque,
+.ubicacion .bloque {
+  display: flex;
+  align-items: center;
+  margin-top: 12px;
+  gap: 15px;
+}
+
+.quienes-somos .bloque img,
+.que-ofrecemos .bloque img,
+.ubicacion .bloque img {
+  width: 20%;
+  border-radius: 6px;
+}
+
+/* Taller */
+.descripcion-taller .bloque,
+.servicios-taller .bloque,
+.ventajas-taller .bloque {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.descripcion-taller .bloque img,
+.servicios-taller .bloque img,
+.ventajas-taller .bloque img {
+  width: 15%;
+  border-radius: 6px;
+}
+
+/* Ventas */
+#carretera-urbanas,
+#montaña {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  gap: 20px;
+}
+#carretera-urbanas .producto,
+#montaña .producto {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+/* Alquiler */
+#contenido {
+  width: 90%;
+  max-width: 1200px;
+  margin: 30px auto;
+  display: grid;
+  gap: 20px;
+}
+
+#contenido .producto {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  background: #ffffff;
+  border: 1px solid #dcdcdc;
+  border-radius: 8px;
+  padding: 16px;
+}
+
