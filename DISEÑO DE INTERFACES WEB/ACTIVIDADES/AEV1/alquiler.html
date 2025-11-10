@@ -8,9 +8,15 @@
 </head>
 <body>
     <header>
+
+        <div class="idiomas">
+            <button onclick="setLang('es')">ES</button>
+            <button onclick="setLang('val')">VAL</button>
+        </div>
+
         <div class="title-subtitle">
             <h1>BicisVal</h1>
-            <h2>Alquiler</h2>
+            <h2 data-i18n="alquiler.titulo">Alquiler</h2>
         </div>
         
         <nav class="main-nav" aria-label="Principal">
@@ -31,9 +37,9 @@
             <div class="texto">
                 <h2>Specialized</h2>
                 <h3>Sirrus X 3.0 25</h3>
-                <p>Ofreciendo una combinación sin precedentes de confort, eficiencia y manejo ágil, la Bicicleta Specialized Sirrus X 3.0 25 que te presentamos en Escapa destaca en asfalto, tierra y cualquier terreno intermedio.</p>
-                <p><strong>Precio por día:</strong> 18 € / día</p>
-                <p><strong>Precio fin de semana (2-3 días):</strong> 45 €</p>
+                <p data-i18n="alquiler.sirrusx3.desc">Ofreciendo una combinación sin precedentes de confort, eficiencia y manejo ágil, la Bicicleta Specialized Sirrus X 3.0 25 que te presentamos en Escapa destaca en asfalto, tierra y cualquier terreno intermedio.</p>
+                <p><strong data-i18n="alquiler.precioDia">Precio por día:</strong> 18 € / día</p>
+                <p><strong data-i18n="alquiler.precioFinDeSemana">Precio fin de semana (2-3 días):</strong> 45 €</p>
             </div>
         </div>
         <div class="producto">
@@ -43,8 +49,8 @@
             <div class="texto">
                 <h2>Specialized</h2>
                 <h3>Sirrus X 5.0 25</h3>
-                <p>La Specialized Sirrus X 5.0 (2025) es una bicicleta híbrida de alto rendimiento diseñada para quienes buscan comodidad, eficiencia y versatilidad. Su cuadro ligero de carbono y transmisión monoplato ofrecen una conducción suave y precisa tanto en carretera como en caminos urbanos o de tierra. Con neumáticos anchos, posición erguida y una excelente absorción de vibraciones, la Sirrus X 5.0 garantiza un pedaleo ágil, estable y confortable en cualquier terreno.</p>
-                <p><strong>Precio por día:</strong> 22 € / día</p>
+                <p data-i18n="alquiler.sirrusx5.desc">La Specialized Sirrus X 5.0 (2025) es una bicicleta híbrida de alto rendimiento diseñada para quienes buscan comodidad, eficiencia y versatilidad. Su cuadro ligero de carbono y transmisión monoplato ofrecen una conducción suave y precisa tanto en carretera como en caminos urbanos o de tierra. Con neumáticos anchos, posición erguida y una excelente absorción de vibraciones, la Sirrus X 5.0 garantiza un pedaleo ágil, estable y confortable en cualquier terreno.</p>
+                <p><strong data-i18n="ventas.precio">Precio por día:</strong> 22 € / día</p>
                 <p><strong>Precio fin de semana (2-3 días):</strong> 55 €</p>
             </div>
         </div>
@@ -55,8 +61,8 @@
             <div class="texto">
                 <h2>BH</h2>
                 <h3>Core Jet Pro</h3>
-                <p>La BH Core Jet Pro es una bicicleta eléctrica de carretera que combina rendimiento, autonomía y diseño aerodinámico. Equipada con un motor BH 2EXMAG integrado y una batería de alta capacidad, ofrece una asistencia potente y natural sin comprometer la estética ni el peso. Su cuadro de carbono, geometría deportiva y componentes de alta gama garantizan una conducción rápida, eficiente y cómoda, ideal para ciclistas que buscan velocidad y libertad en largas distancias.</p>
-                <p><strong>Precio por día:</strong> 35 € / día</p>
+                <p data-i18n="alquiler.corejet.desc">La BH Core Jet Pro es una bicicleta eléctrica de carretera que combina rendimiento, autonomía y diseño aerodinámico. Equipada con un motor BH 2EXMAG integrado y una batería de alta capacidad, ofrece una asistencia potente y natural sin comprometer la estética ni el peso. Su cuadro de carbono, geometría deportiva y componentes de alta gama garantizan una conducción rápida, eficiente y cómoda, ideal para ciclistas que buscan velocidad y libertad en largas distancias.</p>
+                <p><strong data-i18n="ventas.precio">Precio por día:</strong> 35 € / día</p>
                 <p><strong>Precio fin de semana (2-3 días):</strong> 85 €</p>
             </div>
         </div>
@@ -67,8 +73,8 @@
             <div class="texto">
                 <h2>BH</h2>
                 <h3>Core Cross</h3>
-                <p>La BH Core Cross es una bicicleta eléctrica híbrida pensada para quienes combinan ciudad y aventura. Ofrece un equilibrio perfecto entre comodidad, potencia y autonomía, gracias a su motor BH 2EXMAG integrado y batería de larga duración. Su diseño ergonómico, con posición de conducción cómoda y componentes fiables, la hace ideal tanto para desplazamientos urbanos diarios como para rutas por caminos y pistas con total confianza.</p>
-                <p><strong>Precio por día:</strong> 30 € / día</p>
+                <p data-i18n="alquiler.corecross.desc">La BH Core Cross es una bicicleta eléctrica híbrida pensada para quienes combinan ciudad y aventura. Ofrece un equilibrio perfecto entre comodidad, potencia y autonomía, gracias a su motor BH 2EXMAG integrado y batería de larga duración. Su diseño ergonómico, con posición de conducción cómoda y componentes fiables, la hace ideal tanto para desplazamientos urbanos diarios como para rutas por caminos y pistas con total confianza.</p>
+                <p><strong data-i18n="ventas.precio">Precio por día:</strong> 30 € / día</p>
                 <p><strong>Precio fin de semana (2-3 días):</strong> 75 €</p>
             </div>
         </div>
@@ -84,6 +90,6 @@
         </section>
     </footer>
 
-
+    <script src="i18n.js"></script>
 </body>
 </html>

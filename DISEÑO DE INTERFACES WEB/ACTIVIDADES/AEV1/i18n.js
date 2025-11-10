@@ -66,11 +66,9 @@ function setLang(lang) {
         val: "realitzem 8 tipus de reparacions i manteniments, des d'ajustos bàsics fins a restauracions completes. El nostre equip tècnic cuida cada detall perquè la teua bici quede com nova."
     },
     // Venta
-    
-    // Etiqueta común de precio
+
     "ventas.precio": { es: "Precio:", val: "Preu:" },
 
-    // Descripciones (carretera-urbanas)
     "ventas.tarmac.desc": {
         es: "No hay nada más rápido que la Tarmac SL8. Aerodinámica, ligereza y una calidad de conducción de otro nivel: es la Tarmac más rápida de la historia.",
         val: "No hi ha res més ràpid que la Tarmac SL8. Aerodinàmica, lleugeresa i una qualitat de conducció d’un altre nivell: és la Tarmac més ràpida de la història."
@@ -96,7 +94,6 @@ function setLang(lang) {
         val: "Core Street: urbana còmoda i lleugera per a desplaçaments diaris. Posició relaxada i components fiables."
     },
 
-    // Descripciones (montaña)
     "ventas.epicwc.desc": {
         es: "S-Works Epic World Cup: eficiencia, control y ligereza para XC al más alto nivel. Desarrollada con enfoque integral de competición.",
         val: "S-Works Epic World Cup: eficiència, control i lleugeresa per a XC al més alt nivell. Desenvolupada amb enfocament integral de competició."
@@ -106,9 +103,88 @@ function setLang(lang) {
         val: "BH Lynx Race 9.5: doble suspensió XC de nivell professional, quadre de carboni i components de primer nivell per a competir al màxim."
     },
 
-    // Alquiler 
+    // Alquiler
+    "alquiler.titulo": { es: "Alquiler", val: "Lloguer" },
+ 
+    "alquiler.sirrusx3.desc": {
+    es: "Ofreciendo una combinación sin precedentes de confort, eficiencia y manejo ágil, la Specialized Sirrus X 3.0 25 destaca en asfalto, tierra y cualquier terreno intermedio.",
+    val: "Oferint una combinació sense precedents de confort, eficiència i maneig àgil, la Specialized Sirrus X 3.0 25 destaca en asfalt, terra i qualsevol terreny intermedi."
+    },
+    "alquiler.sirrusx5.desc": {
+    es: "La Specialized Sirrus X 5.0 (2025) es una bicicleta híbrida de alto rendimiento diseñada para quienes buscan comodidad, eficiencia y versatilidad.",
+    val: "La Specialized Sirrus X 5.0 (2025) és una bicicleta híbrida d’alt rendiment dissenyada per a qui busca comoditat, eficiència i versatilitat."
+    },
+    "alquiler.corejet.desc": {
+    es: "La BH Core Jet Pro es una bicicleta eléctrica de carretera que combina rendimiento, autonomía y diseño aerodinámico.",
+    val: "La BH Core Jet Pro és una bicicleta elèctrica de carretera que combina rendiment, autonomia i disseny aerodinàmic."
+    },
+    "alquiler.corecross.desc": {
+    es: "La BH Core Cross es una bicicleta eléctrica híbrida pensada para quienes combinan ciudad y aventura.",
+    val: "La BH Core Cross és una bicicleta elèctrica híbrida pensada per a qui combina ciutat i aventura."
+    },
+    "alquiler.precioDia": { es: "Precio por día:", val: "Preu per dia:" },
+    "alquiler.precioFinDeSemana": { es: "Precio fin de semana (2-3 días):", val: "Preu cap de setmana (2-3 dies):" },
 
-
+    // Taller
+"taller.titulo": { es: "Taller", val: "Taller" },
+"taller.subtitulo1": { es: "Tu bici, en las mejores manos", val: "La teua bici, en les millors mans" },
+"taller.parrafo1": {
+  es: "En el taller de BicisVal cuidamos cada bicicleta como si fuera nuestra. Contamos con un equipo técnico con años de experiencia que trabaja con herramientas profesionales y repuestos originales, para garantizar siempre el mejor resultado.",
+  val: "Al taller de BicisVal cuidem cada bicicleta com si fora nostra. Comptem amb un equip tècnic amb anys d'experiència que treballa amb ferramentes professionals i recanvis originals, per a garantir sempre el millor resultat."
+},
+"taller.parrafo2": {
+  es: "Realizamos desde mantenimientos básicos hasta reparaciones completas. Nuestro objetivo es que vuelvas a rodar lo antes posible, con tu bici en perfecto estado y total seguridad.",
+  val: "Realitzem des de manteniments bàsics fins a reparacions completes. El nostre objectiu és que tornes a pedalejar al més prompte possible, amb la teua bici en perfecte estat i total seguretat."
+},
+"taller.subtitulo2": { 
+    es: "Tipos de reparaciones que realizamos", 
+    val: "Tipus de reparacions que realitzem" },
+"taller.rep1": { 
+    es: "Ajuste de frenos y cambios", 
+    val: "Ajust de frens i canvis" },
+"taller.rep2": { 
+    es: "Cambio de cubiertas y cámaras", 
+    val: "Canvi de cobertes i càmeres" },
+"taller.rep3": { 
+    es: "Centrado y alineado de ruedas", 
+    val: "Centrament i alineació de rodes" },
+"taller.rep4": { es: 
+    "Sustitución de cadenas, piñones y platos", 
+    val: "Substitució de cadenes, pinyons i plats" },
+"taller.rep5": { 
+    es: "Mantenimiento de suspensión delantera", 
+    val: "Manteniment de suspensió davantera" },
+"taller.rep6": { es: 
+    "Engrase y limpieza completa", 
+    val: "Greixat i neteja completa" },
+"taller.rep7": { es: 
+    "Montaje de accesorios (portabultos, luces, sillines, etc.)", 
+    val: "Muntatge d’accessoris (portaequipatges, llums, seients, etc.)" },
+"taller.rep8": { es: 
+    "Diagnóstico general y revisión de seguridad", 
+    val: "Diagnòstic general i revisió de seguretat" },
+"taller.subtitulo3": { 
+    es: "¿Por qué elegir nuestro taller?", 
+    val: "Per què triar el nostre taller?" },
+"taller.vent1": { 
+    es: "✔ Atención sin cita previa", 
+    val: "✔ Atenció sense cita prèvia" },
+"taller.vent2": { 
+    es: "✔ Presupuestos claros y sin compromiso", 
+    val: "✔ Pressupostos clars i sense compromís" },
+"taller.vent3": { es: 
+    "✔ Repuestos originales y de calidad", val: 
+    "✔ Recanvis originals i de qualitat" },
+"taller.vent4": { es: 
+    "✔ Revisión gratuita con cada reparación", val: 
+    "✔ Revisió gratuïta amb cada reparació" },
+"taller.vent5": { es: 
+    "✔ Servicio rápido: en la mayoría de casos, en menos de 48 horas", 
+    val: "✔ Servei ràpid: en la majoria de casos, en menys de 48 hores" },
+"taller.parrafo3": {
+  es: "Si necesitas ayuda o una revisión urgente, llámanos al 963 123 456 o pásate por nuestra tienda en la Calle de la Paz, 24.",
+  val: "Si necessites ajuda o una revisió urgent, telefona’ns al 963 123 456 o passa’t per la nostra botiga al carrer de la Pau, 24."
+},
 };
 
   document.querySelectorAll("[data-i18n]").forEach(el => {

@@ -8,6 +8,11 @@
 </head>
 <body>
     <header>
+        <div class="idiomas">
+            <button onclick="setLang('es')">ES</button>
+            <button onclick="setLang('val')">VAL</button>
+        </div>
+
         <div class="title-subtitle">
             <h1>BicisVal</h1>
             <h2>Taller</h2>
@@ -25,56 +30,56 @@
     
     <main id="contenido">
         <section class="descripcion-taller">
-            <h3>Tu bici, en las mejores manos</h3>
+            <h3 data-i18n="taller.subtitulo1">Tu bici, en las mejores manos</h3>
             <div class="bloque">
-            <img src="images/logotaller.jpg" alt="logo taller">
+                <img src="images/logotaller.jpg" alt="logo taller">
                 <div class="texto">
-                    <p>
-                    En el taller de <strong>BicisVal</strong> cuidamos cada bicicleta como si fuera nuestra. 
-                    Contamos con un equipo técnico con años de experiencia que trabaja con herramientas 
-                    profesionales y repuestos originales, para garantizar siempre el mejor resultado.
+                    <p data-i18n="taller.parrafo1">
+                        En el taller de <strong>BicisVal</strong> cuidamos cada bicicleta como si fuera nuestra. 
+                        Contamos con un equipo técnico con años de experiencia que trabaja con herramientas 
+                        profesionales y repuestos originales, para garantizar siempre el mejor resultado.
                     </p>
-                    <p>
-                    Realizamos desde mantenimientos básicos hasta reparaciones completas. 
-                    Nuestro objetivo es que vuelvas a rodar lo antes posible, con tu bici en perfecto estado y total seguridad.
+                    <p data-i18n="taller.parrafo2">
+                        Realizamos desde mantenimientos básicos hasta reparaciones completas. 
+                        Nuestro objetivo es que vuelvas a rodar lo antes posible, con tu bici en perfecto estado y total seguridad.
                     </p>
                 </div>
             </div>
         </section>
 
         <section class="servicios-taller">
-            <h3>Tipos de reparaciones que realizamos</h3>
+            <h3 data-i18n="taller.subtitulo2">Tipos de reparaciones que realizamos</h3>
             <div class="bloque">
                 <img src="images/taller.jpg" alt="taller">
                 <div class="texto">
                     <ul>
-                        <li>Ajuste de frenos y cambios</li>
-                        <li>Cambio de cubiertas y cámaras</li>
-                        <li>Centrado y alineado de ruedas</li>
-                        <li>Sustitución de cadenas, piñones y platos</li>
-                        <li>Mantenimiento de suspensión delantera</li>
-                        <li>Engrase y limpieza completa</li>
-                        <li>Montaje de accesorios (portabultos, luces, sillines, etc.)</li>
-                        <li>Diagnóstico general y revisión de seguridad</li>
+                        <li data-i18n="taller.rep1">Ajuste de frenos y cambios</li>
+                        <li data-i18n="taller.rep2">Cambio de cubiertas y cámaras</li>
+                        <li data-i18n="taller.rep3">Centrado y alineado de ruedas</li>
+                        <li data-i18n="taller.rep4">Sustitución de cadenas, piñones y platos</li>
+                        <li data-i18n="taller.rep5">Mantenimiento de suspensión delantera</li>
+                        <li data-i18n="taller.rep6">Engrase y limpieza completa</li>
+                        <li data-i18n="taller.rep7">Montaje de accesorios (portabultos, luces, sillines, etc.)</li>
+                        <li data-i18n="taller.rep8">Diagnóstico general y revisión de seguridad</li>
                     </ul>
                 </div>
             </div>
         </section>
 
         <section class="ventajas-taller">
-            <h3>¿Por qué elegir nuestro taller?</h3>
+            <h3 data-i18n="taller.subtitulo3">¿Por qué elegir nuestro taller?</h3>
             <div class="bloque">
-            <img src="images/taller2.jpg" alt="taller2">
+                <img src="images/taller2.jpg" alt="taller2">
                 <div class="texto">
                     <ul>
-                        <li>✔ Atención sin cita previa</li>
-                        <li>✔ Presupuestos claros y sin compromiso</li>
-                        <li>✔ Repuestos originales y de calidad</li>
-                        <li>✔ Revisión gratuita con cada reparación</li>
-                        <li>✔ Servicio rápido: en la mayoría de casos, en menos de 48 horas</li>
+                        <li data-i18n="taller.vent1">✔ Atención sin cita previa</li>
+                        <li data-i18n="taller.vent2">✔ Presupuestos claros y sin compromiso</li>
+                        <li data-i18n="taller.vent3">✔ Repuestos originales y de calidad</li>
+                        <li data-i18n="taller.vent4">✔ Revisión gratuita con cada reparación</li>
+                        <li data-i18n="taller.vent5">✔ Servicio rápido: en la mayoría de casos, en menos de 48 horas</li>
                     </ul>
-                    <p>
-                    Si necesitas ayuda o una revisión urgente, llámanos al <strong>963 123 456</strong> o pásate por nuestra tienda en la Calle de la Paz, 24.
+                    <p data-i18n="taller.parrafo3">
+                        Si necesitas ayuda o una revisión urgente, llámanos al <strong>963 123 456</strong> o pásate por nuestra tienda en la Calle de la Paz, 24.
                     </p>
                 </div>
             </div>
@@ -92,6 +97,7 @@
         </section>
     </footer>
 
+    <script src="i18n.js"></script>
 
 </body>
 </html>
