@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listado de Productos</title>
+</head>
+<body>
+<h1>Listado de Productos</h1>
+<nav>
+    <a href="/">Inicio</a> |
+    <a href="/clientes">Clientes</a> |
+    <a href="/pedidos">Pedidos</a> |
+    <a href="/productos">Productos</a>
+</nav>
+<hr>
+<p><a href="/producto/create">➕ Crear Nuevo Producto</a></p>
+<table border="1">
+    <tr>
+        <th>ID Producto</th>
+        <th>Descripción</th>
+        <th>Pedidos Relacionados</th>
+        <th>Acciones</th>
+    </tr>
+    <?php if (empty($products)): ?>
+    <tr>
+        <td colspan="4">No hay productos registrados</td>
+    </tr>
+    <?php else: ?>
+    <?php foreach ($products as $product): ?>
+    <tr>
+        <td><?php echo htmlspecialchars($product->getId()) ?></td>
+        <td><?php echo htmlspecialchars($product->getDescription()) ?></td>
+        <td>
+            <?php
+        // Obtener pedidos únicos relacionados con este producto
+        $orderIds = [];
+        foreach ($product->getDetails() as $detail) {
+            $orderId = $detail->getOrder()->getId();
+            if (!in_array($orderId, $orderIds)) { ?>
+            <a href="/pedido/read/<?php echo $orderId ?>"><?php echo $orderId ?></a>
+            <?php
+            }
+            }
+            ?>
+        </td>
+        <td>
+            <a href="/producto/update/<?php echo $product->getId() ?>">Actualizar</a> |
+            <a href="/producto/delete/<?php echo $product->getId() ?>">Eliminar</a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</table>
+</body>
+</html>
+
+
+
+
+<!--
+    Codigo comentado
+-->
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <!--
+        📌 Hace que la página sea "responsive" en móviles,
+        ajustando el ancho al tamaño de la pantalla.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--
+        Título que aparece en la pestaña del navegador.
+        ✅ Para otro proyecto: cambia "Productos" por el nombre de la entidad.
+    -->
+    <title>Listado de Productos</title>
+</head>
+<body>
+
+<!--
+    Título principal de la página.
+    ✅ Para otro proyecto: "Listado de Usuarios", "Listado de Pedidos", etc.
+-->
+<h1>Listado de Productos</h1>
+
+<!--
+    Menú de navegación sencillo.
+    Cada enlace apunta a una ruta que el sistema de routing debe conocer.
+    ✅ Para reaprovechar:
+       - Cambia las rutas según el enunciado (por ejemplo /usuarios, /facturas…)
+-->
+<nav>
+    <a href="/">Inicio</a> |
+    <a href="/clientes">Clientes</a> |
+    <a href="/pedidos">Pedidos</a> |
+    <a href="/productos">Productos</a>
+</nav>
+
+<hr>
+
+<!--
+    Enlace para ir a la acción de creación de un nuevo producto.
+    Normalmente esta ruta está asociada a ProductController->crud('create')
+-->
+<p>
+    <a href="/producto/create">➕ Crear Nuevo Producto</a>
+</p>
+
+<!--
+    Tabla que muestra el listado de productos.
+    border="1" es puramente visual para darle borde a las celdas.
+-->
+<table border="1">
+    <!--
+        Fila de cabecera de la tabla.
+        ✅ Para otro proyecto, cambia estos <th> por los campos de la entidad:
+           - ID Usuario, Nombre, Email, Rol, etc.
+    -->
+    <tr>
+        <th>ID Producto</th>
+        <th>Descripción</th>
+        <th>Pedidos Relacionados</th>
+        <th>Acciones</th>
+    </tr>
+
+    <!--
+        Comprobación: si NO hay productos en la colección/array $products,
+        mostramos una fila con un mensaje y salimos.
+        - empty($products) => true si es [], null, etc.
+    -->
+    <?php if (empty($products)): ?>
+    <tr>
+        <!--
+            colspan="4" porque la tabla tiene 4 columnas en total.
+            Si añades más columnas, recuerda ajustar este valor.
+        -->
+        <td colspan="4">No hay productos registrados</td>
+    </tr>
+
+    <?php else: ?>
+
+    <!--
+        Recorremos el array/colección de productos.
+        - $products viene desde el controlador ProductController->list()
+        - Cada $product es un objeto de la entidad Product.
+        ✅ Para otro proyecto: cambia "$product" y getters por la entidad correspondiente.
+    -->
+    <?php foreach ($products as $product): ?>
+    <tr>
+        <!--
+            htmlspecialchars() protege contra XSS y muestra caracteres especiales correctamente.
+            SIEMPRE es buena práctica al imprimir datos que vienen "dinámicos".
+        -->
+
+        <!-- ID del producto -->
+        <td><?php echo htmlspecialchars($product->getId()) ?></td>
+
+        <!-- Descripción del producto -->
+        <td><?php echo htmlspecialchars($product->getDescription()) ?></td>
+
+        <!--
+            Columna de "Pedidos Relacionados":
+            Aquí se muestra una lista de pedidos en los que aparece ese producto.
+            Se asume una relación:
+                Product 1 --- * Detail * --- 1 Order
+            donde:
+                - $product->getDetails() devuelve los "detalles de pedido" asociados.
+                - Cada detalle tiene un ->getOrder() que devuelve el pedido.
+        -->
+        <td>
+            <?php
+            // Array para ir guardando los IDs de pedido ya mostrados.
+            // Sirve para evitar duplicar enlaces si un mismo pedido tiene
+            // varias líneas de detalle para el mismo producto.
+            $orderIds = [];
+
+            // Recorremos todos los detalles del producto.
+            foreach ($product->getDetails() as $detail) {
+            // Obtenemos el ID del pedido asociado a ese detalle.
+            $orderId = $detail->getOrder()->getId();
+
+            // Si todavía NO hemos mostrado este pedido, lo mostramos ahora.
+            if (!in_array($orderId, $orderIds)) {
+            // Guardamos el ID en el array para no repetirlo más adelante.
+            $orderIds[] = $orderId;
+            ?>
+            <!--
+                Enlace a la ruta que muestra la información de un pedido concreto.
+                Se asume una ruta tipo: /pedido/read/{id}
+                ✅ Para otro proyecto:
+                   - Cambia "pedido" por la entidad que quieras enlazar.
+            -->
+            <a href="/pedido/read/<?php echo $orderId ?>">
+                <?php echo htmlspecialchars($orderId) ?>
+            </a>
+            <?php
+                }
+            }
+            ?>
+        </td>
+
+        <!--
+            Columna de acciones sobre cada producto:
+            - Actualizar: lleva al formulario de edición.
+            - Eliminar: lleva a la pantalla de confirmación de borrado.
+            Estas rutas se asocian a ProductController->crud('update', $id)
+            y ProductController->crud('delete', $id)
+        -->
+        <td>
+            <!-- Enlace para actualizar el producto concreto -->
+            <a href="/producto/update/<?php echo $product->getId() ?>">Actualizar</a> |
+
+            <!-- Enlace para eliminar el producto concreto -->
+            <a href="/producto/delete/<?php echo $product->getId() ?>">Eliminar</a>
+        </td>
+    </tr>
+    <?php endforeach; ?>
+    <?php endif; ?>
+</table>
+</body>
+</html>
