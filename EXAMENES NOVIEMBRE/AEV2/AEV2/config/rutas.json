@@ -1,0 +1,26 @@
+{
+  "/": {
+    "controller": "MainController",
+    "action": "main"
+  },
+  "/clientes": {
+    "controller": "ClientController",
+    "action": "listClients"
+  },
+  "/pedidos": {
+  "controller": "OrderController",
+  "action": "listOrders"
+  },
+  "/pedidos/read/605": {
+    "controller": "OrderController",
+    "action": "readOrder"
+  },
+  "/empleados": {
+    "controller": "EmployeeController",
+    "action": "listEmployees"
+  },
+  "/departamentos": {
+    "controller": "DepartmentController",
+    "action": "listDepartments"
+  }
+}

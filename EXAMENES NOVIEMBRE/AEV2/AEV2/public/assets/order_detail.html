@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Pedido</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; margin-top: 1rem; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #f4f4f4; }
+        .header { background: #e0e0e0; padding: 10px; margin-bottom: 10px; }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/clientes">Clientes</a>
+    <a href="/pedidos">Pedidos</a>
+    <a href="/empleados">Empleados</a>
+    <a href="/departamentos">Departamentos</a>
+</nav>
+<h1>Detalle del Pedido #<?= $order->getId() ?></h1>
+
+</body>
+</html>

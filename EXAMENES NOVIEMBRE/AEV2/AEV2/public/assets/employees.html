@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Empleados</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #f4f4f4; }
+    </style>
+</head>
+
+<body>
+<nav>
+    <a href="/clientes">Clientes</a>
+    <a href="/pedidos">Pedidos</a>
+    <a href="/empleados">Empleados</a>
+    <a href="/departamentos">Departamentos</a>
+</nav>
+<h1>Empleados</h1>
+<table>
+    <thead>
+    <tr><th>ID</th><th>Apellidos</th><th>Oficio</th><th>Jefe</th><th>Fecha Alta</th><th>Salario</th><th>Comisión</th><th>Departamento</th><th>Clientes</th></tr>
+    </thead>
+    <tbody>
+    <?php if ($employees): ?>
+    <?php foreach ($employees as $emp): ?>
+    <tr>
+        <td><?= $emp->getId() ?></td>
+        <td><?= $emp->getSurname() ?></td>
+        <td><?= $emp->getJob() ?></td>
+        <td><?= $emp->getBoss()?->getSurname() ?></td>
+        <td><?= $emp->getHireDate()->format('Y-m-d')  ?></td>
+        <td><?= $emp->getSalary() ?></td>
+        <td><?= $emp->getCommission() ?></td>
+        <td><?= $emp->getDepartment()?->getName() ?></td>
+        <td><?= $emp->getClients()->count() ?></td>
+    </tr>
+    <?php endforeach; ?>
+    <?php else: ?>
+    <tr><td colspan="4">No hay empleados registrados.</td></tr>
+    <?php endif; ?>
+    </tbody>
+</table>
+</body>
+</html>

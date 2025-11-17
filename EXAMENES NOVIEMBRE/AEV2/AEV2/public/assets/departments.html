@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Departamentos</title>
+    <style>
+        table { border-collapse: collapse; width: 100%; }
+        th, td { border: 1px solid #ccc; padding: 8px; }
+        th { background: #f4f4f4; }
+    </style>
+</head>
+<body>
+<nav>
+    <a href="/clientes">Clientes</a>
+    <a href="/pedidos">Pedidos</a>
+    <a href="/empleados">Empleados</a>
+    <a href="/departamentos">Departamentos</a>
+</nav>
+<h1>Departamentos</h1>
+<table>
+    <thead>
+    <tr><th>ID</th><th>Nombre</th><th>Localización</th><th>Color</th><th>Num Empleados</th></tr>
+    </thead>
+    <tbody>
+    <?php if ($departments): ?>
+    <?php foreach ($departments as $dept): ?>
+    <tr>
+        <td><?= $dept->getId() ?></td>
+        <td><?= $dept->getName() ?></td>
+        <td><?= $dept->getLocation() ?></td>
+        <td><?= $dept->getColor() ?></td>
+        <td><?= $dept->getEmployees()->count() ?></td>
+    </tr>
+    <?php endforeach; ?>
+    <?php else: ?>
+    <tr><td colspan="4">No hay departamentos registrados.</td></tr>
+    <?php endif; ?>
+    </tbody>
+</table>
+</body>
+</html>

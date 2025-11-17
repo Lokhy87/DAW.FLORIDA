@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio Pokémon</title>
+
+    <style>
+        #card {
+            border: 1px solid #ccc;
+            padding: 16px;
+            max-width: 300px;
+            margin-top: 20px;
+            text-align: center;
+        }
+
+        #card img {
+            width: 150px;
+            height: 150px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>Buscador de Pokémon</h1>
+
+    <!-- Formulario de búsqueda -->
+    <form id="pokemon-form">
+        <input type="text" name="pokemon" placeholder="Nombre o ID de Pokémon">
+        <button name="get-pokemon">Buscar Pokémon</button>
+    </form>
+
+    <!-- Contenedor donde irá la card -->
+    <div class="table-wrapper"></div>
+
+    <script src="script.js"></script>
+</body>
+</html>
