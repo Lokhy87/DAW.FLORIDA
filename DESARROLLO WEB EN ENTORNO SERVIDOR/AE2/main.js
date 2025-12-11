@@ -154,3 +154,5 @@ showMoreBtn.addEventListener('click', () => {
 
 // --- EJECUCIÓN ---
 getpokemon();
+
+
