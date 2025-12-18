@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Galería de Productos | Tienda Demo</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header>
+      <h1>Tienda Demo</h1>
+      <p>Galería de productos con imágenes y videos</p>
+    </header>
+
+    <main class="gallery">
+      <div class="product">
+        <img src="assets/producto1.jpg" alt="Producto 1" loading="lazy" />
+        <h3>Producto 1</h3>
+        <p>$25.00</p>
+      </div>
+
+      <div class="product">
+        <img src="assets/producto2.jpg" alt="Producto 2" />
+        <h3>Producto 2</h3>
+        <p>$45.00</p>
+      </div>
+
+      <div class="product">
+        <video controls preload="none" poster="assets/producto1.jpg">
+          <source src="assets/producto3.mp4" type="video/mp4" />
+          Tu navegador no soporta video HTML5.
+        </video>
+        <h3>Video del Producto</h3>
+        <p>$30.00</p>
+      </div>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
