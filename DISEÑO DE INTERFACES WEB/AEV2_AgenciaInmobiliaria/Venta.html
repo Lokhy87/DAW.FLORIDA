@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agencia Inmobiliaria-Venta</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Inter:wght@400;500&display=swap" rel="stylesheet">
+
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+</head>
+<body>
+    <!-- Logo + Menu navegación -->
+    <nav class="navbar navbar-expand-sm">
+        <div class="container-fluid">
+            <span class="navbar-brand">
+                <img src="images/LogoAC.png" alt="Logotipo de la agencia" width="100" height="100">
+            </span>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="collapsibleNavbar">
+                <ul class="navbar-nav w-100 justify-content-center">
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="Home.html">Inicio</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="Venta.html">Ventas</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="Conocenos.html">Conócenos</a>
+                    </li>
+                    <li class="nav-item mx-5">
+                        <a class="nav-link" href="Contacto.html">Contacto</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Fotos de inmuebles -->
+     <div class="container">
+        <h2 class="text-center mb-4">Viviendas en Venta</h2>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/images/casa1.jpg" alt="primera vivienda en venta" class="img-fluid vivienda-img">
+            </div>
+            <div class="col-md-4 offset-md-4">
+                <img src="/images/casa2.jpg" alt="segunda vivienda en venta" class="img-fluid vivienda-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4 offset-md-4">
+                <img src="/images/casa3.jpg" alt="tercera vivienda en venta" class="img-fluid vivienda-img">
+            </div>
+            <div class="col-md-4 ">
+                <img src="/images/casa4.jpg" alt="cuarta vivienda en venta" class="img-fluid vivienda-img">
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-4">
+                <img src="/images/casa5.jpg" alt="quinta vivienda en venta" class="img-fluid vivienda-img">
+            </div>
+            <div class="col-md-4">
+                <img src="/images/casa6.jpg" alt="sexta vivienda en venta" class="img-fluid vivienda-img">
+            <!-- Esta es la unica forma que he contrado para hacer que el ultimo hueco quede libre, entiendo que se podria hacer con:
+             <div class="row">
+                <div class="col-md-4">
+                    <img src="/images/casa5.jpg" alt="quinta vivienda en venta" class="img-fluid">
+                </div>
+
+                <div class="col-md-3 offset-md-1">
+                    <img src="/images/casa6.jpg" alt="sexta vivienda en venta" class="img-fluid">
+                </div>
+            </div>
+            pero la forma anterior me ha parecido mas limpia y funcional -->
+            </div>
+        </div>
+     </div>
+
+    <!-- Footer -->
+    <footer class="bg-light mt-5 pt-4 pb-3">
+        <div class="container">
+            <div class="row">
+                <!-- Dónde estamos -->
+                <div class="col-md-3 mb-4">
+                    <h5>¿Dónde estamos?</h5>
+                    <iframe src="https://www.google.com/maps?q=Valencia&output=embed" width="100%" height="150"
+                        style="border:0;" allowfullscreen="" loading="lazy">
+                    </iframe>
+                </div>
+                <!-- Redes Sociales -->
+                <div class="col-md-3 mb-4">
+                    <h5>Síguenos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#" class="text-decoration-none">Facebook</a></li>
+                        <li><a href="#" class="text-decoration-none">Instagram</a></li>
+                        <li><a href="#" class="text-decoration-none">YouTube</a></li>
+                    </ul>
+                </div>
+                <!-- Información de contacto -->
+                <div class="col-md-3 mb-4">
+                    <h5>Contacto</h5>
+                    <p class="mb-1">Agencia Casablanca</p>
+                    <p class="mb-1">Calle Ejemplo, 123</p>
+                    <p class="mb-1">Valencia</p>
+                    <p class="mb-1">Tel: 600 000 000</p>
+                    <p class="mb-0">Email: info@agenciacasablanca.com</p>
+                </div>
+                <!-- Logo y copyright -->
+                <div class="col-md-3 mb-4 text-center">
+                    <img src="images/LogoAC.png" alt="Logotipo Agencia Casablanca" width="100" class="mb-2">
+                    <p class="mb-0">© 2025 Agencia Casablanca</p>
+                    <p class="mb-0">Todos los derechos reservados</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    font-family: 'Inter', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.vivienda-img {
+    transition: opacity 0.2s ease;
+}
+
+.vivienda-img:hover {
+    opacity: 0.5;
+}
+
+

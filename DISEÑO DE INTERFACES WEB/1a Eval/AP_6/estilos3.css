@@ -1,0 +1,7 @@
+input {
+    background: green;
+}
+
+input[name] {
+    border: 2px dashed black;
+}

@@ -1,0 +1,3 @@
+input[name*="recipe"], textarea[name*="recipe"] {
+    border: 2px dashed black;
+}

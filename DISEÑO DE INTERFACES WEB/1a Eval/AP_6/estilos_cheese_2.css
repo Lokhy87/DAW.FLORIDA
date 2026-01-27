@@ -1,0 +1,11 @@
+p.intro {
+    font-style: italic;
+}
+
+h2 + p.intro {
+    font-weight: normal;
+}
+
+p.intro {
+    font-weight: bold;   
+}

@@ -1,0 +1,8 @@
+
+p.intro {
+    font-style: italic;
+}
+
+body > p.intro {
+    font-weight: bold;
+}

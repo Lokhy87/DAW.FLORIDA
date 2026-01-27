@@ -1,0 +1,34 @@
+services:
+  db:
+    image: mysql:8
+    container_name: contenedorMiCine
+    environment:
+      MYSQL_ROOT_PASSWORD: contrasenyaRoot
+      MYSQL_DATABASE: cine
+      MYSQL_USER: usuario1
+      MYSQL_PASSWORD: contrasenyaUsuario1
+    # ports:
+    #   - "3306:3306"
+    volumes:
+      - ./mysql/cine.sql:/docker-entrypoint-initdb.d/cine.sql
+    
+  php:
+    image: lokhy87/docker_cine:v1
+    container_name: contenedorMiApp
+    ports:
+      - "8080:80"
+    depends_on:
+      - db
+    volumes:
+      - ./php:/var/www/html
+
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin:latest
+    container_name: contenedorPhpMyAdmin
+    environment:
+      PMA_HOST: db
+      MYSQL_ROOT_PASSWORD: contrasenyaRoot
+    ports:
+      - "8081:80"
+    depends_on:
+      - db
