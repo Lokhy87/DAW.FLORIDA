@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portfolio</title>
+    <!-- quitar el error el favicon -->
+    <link rel="shortcut icon" href="#" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="#">Lokhy.dev</a>
+      <nav class="nav">
+        <a href="#proyectos">Proyectos</a>
+        <a href="#skills">Skills</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </header>
+
+    <main class="wrapper">
+      <section class="hero">
+        <div class="hero__text">
+          <h1>Alberto Bolta · Data Science & Desarrollo Web</h1>
+          <p>
+            Desarrollador <strong>Full-Stack</strong> con ADN analítico. Especializado en construir soluciones robustas con <strong>Python</strong>, <strong>SQL</strong>, <strong>PHP</strong> y <strong>JavaScript</strong>, integrando habilidades avanzadas de <strong>Data Science</strong> para la gestión inteligente de datos. Mi experiencia previa en el alto rendimiento deportivo me aporta una disciplina diferencial y un enfoque orientado a resultados y optimización constante. Actualmente enfocado en el desarrollo de aplicaciones web dinámicas y funcionales que resuelvan problemas reales.
+          </p>
+          <div class="hero__cta">
+            <a class="btn" href="#proyectos">Ver proyectos</a>
+            <a class="btn btn--ghost" href="#contacto">Contactar</a>
+          </div>
+        </div>
+
+        <div id="container3D" aria-label="Animación decorativa de marca">
+          <video
+            class="hero-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+          >
+            <source src="img/Animacion.mp4" type="video/mp4" />
+          </video>
+        </div>
+
+      </section>
+
+      <section id="proyectos" class="section">
+        <h2>Proyectos</h2>
+        <div class="grid">
+          <article class="card">
+            <h3>Superhero Battle Arena: The Ultimate Showdown</h3>
+            <img
+              src="/img/proyecto1.jpg"
+              alt="Miniatura Proyecto 1"
+              class="project-thumb"
+            />
+            <p>Esta innovadora aplicación te permite sumergirte en el fascinante mundo de los superhéroes, combinando el poder del análisis de datos y el machine learning.
+                Con esta herramienta, podrás explorar detalladamente las características de tus héroes favoritos de Marvel y DC, simular enfrentamientos épicos y descubrir quién sería el vencedor en el combate definitivo.
+                La aplicación utiliza técnicas avanzadas de Machine Learning y un exhaustivo Análisis Exploratorio de Datos (EDA) para brindarte una experiencia única y emocionante.</p>
+            <div class="tags">
+              <span>Python</span><span>Machine Learning</span><span>Data Science</span>
+            </div>
+            <div class="links">
+              <a href="https://github.com/Lokhy87/Proyecto-Machine-Learning">Github</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Performance Data Explorer</h3>
+            <img
+              src="/img/Performance_Data_Explorer.png"
+              alt="Miniatura Proyecto 2"
+              class="project-thumb"
+            />
+            <p>Desarrollo de una herramienta inteligente de scouting mediante Streamlit, diseñada para la localización y filtrado de futbolistas bajo criterios técnicos específicos. La aplicación permite optimizar la toma de decisiones al procesar grandes volúmenes de datos y transformarlos en perfiles visuales y comparables en tiempo real.
+            </p>
+            <div class="tags"><span>Python</span><span>Scraping</span><span>Streamlit</span></div>
+            <div class="links">
+              <a href="https://github.com/Lokhy87/DV7_GROUP">GitHub</a>
+            </div>
+          </article>
+
+          <article class="card">
+            <h3>Hotel Quote AI Assistant</h3>
+            <img
+              src="/img/Hotel Quote_AI_Assistant.png"
+              alt="Miniatura Proyecto 3"
+              class="project-thumb"
+            />
+
+            <p>Desarrollo de un asistente inteligente capaz de procesar lenguaje natural (correos o mensajes) para automatizar presupuestos hoteleros. El bot extrae datos clave como el número de personas y fechas de estancia para generar instantáneamente una factura proforma detallada. Este proyecto une la gestión de datos con una interfaz de usuario eficiente, optimizando los tiempos de respuesta del sector servicios.</p>
+            <div class="tags"><span>JavaScript</span><span>NLP</span></div>
+            <div class="links">
+              <a href="https://github.com/Lokhy87/Hotel_Biarritz">GitHub</a>
+            </div>
+          </article>
+        </div>
+
+        <!-- Proyecto especial: Data Dashboard (Canvas) -->
+        <article class="card card--wide" id="dashboard">
+          <div class="card__header">
+            <div>
+              <h3>Proyecto especial · Data Performance Dashboard</h3>
+              <p class="muted">
+                Visualización en Canvas de métricas (latencia, éxito, carga). Interactivo y optimizado.
+              </p>
+            </div>
+
+            <div class="dash__controls" aria-label="Controles del dashboard">
+              <label class="dash__control">
+                <span>Métrica</span>
+                <select id="metricSelect">
+                  <option value="latency">Latencia (ms)</option>
+                  <option value="success">Éxito (%)</option>
+                  <option value="load">Carga (req/min)</option>
+                </select>
+              </label>
+
+              <label class="dash__control">
+                <span>Ventana</span>
+                <select id="windowSelect">
+                  <option value="15">15 puntos</option>
+                  <option value="30" selected>30 puntos</option>
+                  <option value="60">60 puntos</option>
+                </select>
+              </label>
+
+              <button class="btn btn--small btn--ghost" id="regenData" type="button">
+                Regenerar
+              </button>
+            </div>
+          </div>
+
+          <div class="dash__wrap">
+            <canvas id="dashCanvas" width="960" height="360" aria-label="Gráfico de métricas"></canvas>
+
+            <div class="dash__stats" aria-label="Resumen de métricas">
+              <div class="dash__stat"><span class="muted">Min</span><strong id="statMin">-</strong></div>
+              <div class="dash__stat"><span class="muted">Media</span><strong id="statAvg">-</strong></div>
+              <div class="dash__stat"><span class="muted">Max</span><strong id="statMax">-</strong></div>
+              <div class="dash__stat"><span class="muted">Último</span><strong id="statLast">-</strong></div>
+            </div>
+
+            <div class="dash__hint">
+              <span><kbd>Click</kbd> muestra valor</span>
+              <span>Guarda preferencias en <kbd>localStorage</kbd></span>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section id="skills" class="section">
+        <h2>Skills</h2>
+        <div class="grid grid--2">
+          <div class="card">
+            <h3>Técnicas</h3>
+            <ul>
+              <li>Python (Data Science, Scripting)</li>
+              <li>Machine Learning (EDA, modelos supervisados)</li>
+              <li>JavaScript (Web interactiva, Canvas)</li>
+              <li>SQL (consultas y modelado de datos)</li>
+            </ul>
+          </div>
+          <div class="card">
+            <h3>Otras</h3>
+            <ul>
+              <li>Análisis Exploratorio de Datos (EDA)</li>
+              <li>Automatización de procesos</li>
+              <li>Optimización de rendimiento web</li>
+              <li>Control de versiones (Git / GitHub)</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <section id="contacto" class="section">
+        <h2>Contacto</h2>
+        <div class="card">
+          <p>
+            Email:
+            <a href="mailto:a.bolta@gmail.com">a.bolta@gmail.com</a> ·
+            GitHub: <a href="https://github.com/Lokhy87">Lokhy87</a> · LinkedIn:
+            <a href="https://www.linkedin.com/feed/">Alberto Bolta Sanmateu</a>
+          </p>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      © <span id="year"></span> Alberto Bolta Sanmateu · Web + Data + Canvas
+    </footer>
+
+    <script>
+      document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>
