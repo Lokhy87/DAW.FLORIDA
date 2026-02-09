@@ -1,0 +1,47 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Movie index{% endblock %}
+
+{% block body %}
+    <h1>Indice de Peliculas</h1>
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Titulo</th>
+                <th>Genero</th>
+                <th>Duracion (minutos)</th>
+                <th>Puntuacion</th>
+                <th>Disponibilidad</th>
+                <th>Acciones</th>
+                <th>Reservas totales</th>
+                <th>Reservas activas</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for movie in movies %}
+            <tr>
+                <td>{{ movie.id }}</td>
+                <td>{{ movie.title }}</td>
+                <td>{{ movie.genre }}</td>
+                <td>{{ movie.duration }}</td>
+                <td>{{ movie.rating }}</td>
+                <td>{{ movie.isAvailable ? 'Si' : 'No' }}</td>
+                <td>
+                    <a href="{{ path('app_movie_show', {'id': movie.id}) }}">Mostrar</a>
+                    <a href="{{ path('app_movie_edit', {'id': movie.id}) }}">Editar</a>
+                </td>
+                <td>{{ movieCounters[movie.id].total ?? 0 }}</td>
+                <td>{{ movieCounters[movie.id].active ?? 0 }}</td>
+            </tr>
+        {% else %}
+            <tr>
+                <td colspan="9">No hay registros</td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <a href="{{ path('app_movie_new') }}">Crear nueva</a>
+{% endblock %}
