@@ -1,0 +1,17 @@
+<!-- CAROUSEL -->
+<div class="card">
+    <div class='photo'
+        [ngStyle]="{'background-image': 'url(' + photo + ')'}"> <!-- La imagen se pinta como background-image -->
+    </div>
+    <div class="footer">
+        <div class="titles">
+            <h2 class='card-title'>{{ name }}</h2> <!-- 'name' viene del padre por @Input -->
+        </div>
+    </div>
+    <!-- Botones de navegación del carrusel -->
+    <div id='render-more'>
+        <!-- El hijo NO navega: solo emite eventos al padre -->
+        <button (click)="onPrev()">ANTERIOR</button>
+        <button (click)="onNext()">SIGUIENTE</button>
+    </div>
+</div>

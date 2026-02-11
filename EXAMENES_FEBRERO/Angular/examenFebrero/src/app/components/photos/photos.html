@@ -1,0 +1,17 @@
+    <!-- PHOTO -->
+    <div class="container-view-three">
+        <div class="photos-view-three">
+            <div>
+                <div id='render-more'>
+                    <button (click)="notificarRegreso()">Atrás</button>
+                </div>
+                @if (selectPhoto) {
+                    <img [src]="selectPhoto" style="width: 100%;">
+                } @else {
+                    @for (i of sprites4; track i) {
+                        <img [src]="i" style="width: 24%" (click)="selectPhoto = i">
+                    }
+                }
+            </div>
+        </div>
+    </div>

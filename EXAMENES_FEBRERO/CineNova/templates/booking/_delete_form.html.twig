@@ -1,4 +1,0 @@
-<form method="post" action="{{ path('app_booking_delete', {'id': booking.id}) }}" onsubmit="return confirm('¿Estas seguro que quiere borrar el item?');">
-    <input type="hidden" name="_token" value="{{ csrf_token('delete' ~ booking.id) }}">
-    <button class="btn">Borrar</button>
-</form>

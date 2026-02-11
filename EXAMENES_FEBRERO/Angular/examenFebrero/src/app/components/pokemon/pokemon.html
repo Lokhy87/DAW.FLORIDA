@@ -1,0 +1,12 @@
+<div class="card">
+    <div class="photo"
+        [ngStyle]="{ 'background-image': 'url(' + photo + ')'}"
+        >
+    </div>
+    <div class="footer">
+        <div class="titles">
+            <h2 class='card-title'
+            (click)="seleccionar()">{{ name }}</h2>
+        </div>
+    </div>
+</div>

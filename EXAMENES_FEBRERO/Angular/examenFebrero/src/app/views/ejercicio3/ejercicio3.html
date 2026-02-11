@@ -1,0 +1,46 @@
+<!-- EJERCICIO 3 -->
+<div id="page">
+    <section>
+        <!-- Botones de CAMBIO DE MODO:
+                - NO navegan el carrusel
+                - Cambian el contexto (mode) y lanzan la carga de datos correspondiente -->
+        <div id='render-more'>
+            <button (click)="showCharacters()">PERSONAJES</button>
+            <button (click)="showEpisodes()">EPISODIOS</button>
+        </div>
+        <div class="content">
+            <div class="grid">
+                <!-- Renderizamos el carousel SOLO cuando:
+                        - mode coincide
+                        - y el array tiene datos
+                    Así evitamos errores del tipo: characters[currentIndex] undefined -->
+                @if (mode === 'characters' && characters.length > 0) {
+                    <!-- Reutilización del componente hijo <app-carousel>:
+                            - @Input: datos que el hijo necesita para pintar (name, photo)
+                            - @Output: eventos que el HJO emite (prevItem/nextItem) y que el PADRE maneja con su lógica (prevCharacter/nextCharacter) -->
+                    <app-carousel
+                        [name]="characters[currentIndex].name" 
+                        [photo]="characters[currentIndex].image"
+                        (prevItem)="prevCharacter()" 
+                        (nextItem)="nextCharacter()"
+                        >
+                    </app-carousel>
+                } @else if (mode === 'episodes' && episodes.length > 0){
+                    <app-carousel
+                        [name]="episodes[currentIndexEp].name"
+                        [photo]="defaultPhoto"
+                        (prevItem)="prevEpisode()" 
+                        (nextItem)="nextEpisode()"
+                        >
+                    </app-carousel>
+                }
+            </div>
+            <div id='render-more'>
+                <button (click)="prevCharacter()">ANTERIORES</button>
+                <button (click)="nextCharacter()">SIGUIENTES</button>
+            </div>
+        </div>
+    </section>
+</div>
+
+

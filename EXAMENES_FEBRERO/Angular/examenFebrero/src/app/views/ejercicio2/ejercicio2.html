@@ -1,0 +1,20 @@
+@if (mode === 'list') {
+    <div id="page">
+        <div class="grid">
+            @for (p of pokemon; track p.name) {
+            <app-pokemon 
+                [name]="p.name"
+                [photo]="p.photo"
+                (pokemonSeleccionado)="seleccionar($event)">        
+            </app-pokemon>
+            } 
+        </div>
+    </div>
+} @else {
+    <app-photos
+        [sprites4]="pokemonSeleccionado?.sprites4 ?? []"
+        (volverEstado)="volverALista()">
+    </app-photos>
+}
+
+
