@@ -1,0 +1,18 @@
+<div class="modal show-modal">
+    <div class="modal-content">
+        <span class="close-button" (click)="volver()">×</span>
+        <div class="container">
+            <div class="card">
+                <div class="card-header">
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg" alt="" />
+                </div>
+                <div class="card-body">
+                    <span class="tag">{{ title }}</span>
+                    @for (c of characters; track c) {
+                        <h4>{{ c }}</h4>
+                    }
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

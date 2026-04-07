@@ -1,0 +1,24 @@
+<div class="question" id="question-1">
+    <h4>Ejercicio 1</h4>
+    <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" method="post" action="#">
+        <div class="answer-bank">
+            <div class="answer">
+                <input type="text" name="name" id="name" value="nombre" placeholder="nombre" formControlName="name" />
+            </div>
+            <div class="answer">
+                <input type="submit" value="Enviar" class="primary" />
+            </div>
+        </div>
+    </form>
+</div>
+@if (photos.length > 0){
+    @for (h of historial; track h.name) {
+        <app-git-hub
+            [photos]="h.photos"
+            [termino]="h.name"
+            (selection)="volver()"
+        >
+        </app-git-hub>
+    }
+}
+

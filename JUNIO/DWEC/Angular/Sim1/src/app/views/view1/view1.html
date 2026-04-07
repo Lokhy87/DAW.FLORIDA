@@ -1,0 +1,18 @@
+<form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" method="post">
+    <div class="answer-bank">
+        <div class="answer">
+            <input type="text" formControlName="name" id="name" placeholder="nombre" />
+        </div>
+        <div class="answer">
+            <input type="submit" value="Enviar" class="primary" />
+        </div>
+    </div>
+</form>
+
+@for (p of historial ; track p) {
+    <app-pokemon
+        [name]="p.name"
+        [photo]="p.photo"
+        (pokemonSeleccionado)="selectedPokemon($event)">
+    </app-pokemon>
+}

@@ -1,0 +1,16 @@
+<app-hexagon 
+    [letras]="letras"
+    (pulsacion)="anyadirLetra($event)"
+></app-hexagon>
+
+<div id='render-more'>
+    <button (click)="getWord()">Comprobar</button>
+    <button (click)="borrar()">Borrar palabra</button>
+    <button (click)="reload()">Reload</button>
+</div>
+
+<p>{{ definition }}</p>
+
+
+<p>Words: {{ contador}}</p>
+<p>Current Word: {{ palabra }}</p>
