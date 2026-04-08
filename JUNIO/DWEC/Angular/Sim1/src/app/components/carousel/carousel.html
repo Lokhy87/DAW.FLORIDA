@@ -1,1 +1,19 @@
-<p>carousel works!</p>
+<div class="modal show-modal">
+    <div class="modal-content">
+        <span class="close-button" (click)="cerrarModal()">×</span>
+        <div class="card">
+            <div class='photo'
+                [ngStyle]="{'background-image': 'url( ' + photos[indiceActual] + ')'}">
+            </div>
+            <div class="footer">
+                <div class="titles">
+                    <h2 class='card-title'>{{ name }}</h2>
+                </div>
+            </div>
+            <div id='render-more'>
+                <button (click)="onPrev()">ANTERIOR</button>
+                <button (click)="onNext()">SIGUIENTE</button>
+            </div>
+        </div>
+    </div>
+</div>

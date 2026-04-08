@@ -16,3 +16,11 @@
         (pokemonSeleccionado)="selectedPokemon($event)">
     </app-pokemon>
 }
+
+@if (modal && pokemonSeleccionado) {
+    <app-carousel
+        [name]="pokemonSeleccionado.name"
+        [photos]="pokemonSeleccionado.photos"
+        (cerrar)="cerrarModal()">
+    </app-carousel>
+}
