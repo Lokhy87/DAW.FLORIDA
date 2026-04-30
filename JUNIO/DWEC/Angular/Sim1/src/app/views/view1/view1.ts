@@ -66,7 +66,5 @@ export class View1 {
     this.pokemonSeleccionado = null;
   }
 
-
-
 }
 

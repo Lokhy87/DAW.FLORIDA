@@ -1,0 +1,33 @@
+<!-- EJERCICIO 3  -->
+<div id="page">
+    <section>
+        <div id='render-more'>
+            <button (click)="showCharacters()">PERSONAJES</button>
+            <button (click)="showEpisode()">EPISODIOS</button>
+        </div>
+        <div class="content">
+            <div class="grid">
+                @if (mode === 'characters' && characters.length > 0) {
+                    <app-carousel
+                    [name]="characters[currentIndex].name"
+                    [photo]="characters[currentIndex].image"
+                    (nextItem)="nextCharacter()"
+                    (prevItem)="prevCharacter()"
+                ></app-carousel>
+                } @else if (mode === 'episodes' && episode.length > 0) {
+                    <app-carousel
+                    [name]="episode[currentIndex].name"
+                    [photo]="'https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg'"
+                    (nextItem)="nextCharacter()"
+                    (prevItem)="prevCharacter()"
+                ></app-carousel>
+                }
+        
+            </div>
+            <div id='render-more'>
+                <button (click)="prevPage()">ANTERIORES</button>
+                <button (click)="nextPage()">SIGUIENTES</button>
+            </div>
+        </div>
+    </section>
+</div>

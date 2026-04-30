@@ -1,0 +1,50 @@
+<!-- ACTIVIDAD 2 -->
+@if (mode === 'inicio') {
+    <section>
+        <form (ngSubmit)="onSubmit()" [formGroup]="reactiveform" method="post">
+            <div class="answer-bank">
+                <div class="answer">
+                    <input type="text" formControlName="name" id="pokemon" value="" placeholder="nombre del pokémon" />
+                </div>
+                <div class="answer">
+                    <input type="submit" value="Buscar" class="primary" />
+                </div>
+            </div>
+        </form>
+    </section>
+}
+
+<!-- RENDER -->
+<div id="render-more">
+
+    @if (mode === 'error') {
+        <div class="message-box">
+            <p>No encontrado</p>
+        </div>
+    }
+
+    @if (mode === 'pokemon') {
+        <app-pokemon-card
+                [name]="name"
+                [actualPhoto]="selectedPhoto"
+                [height]="height"
+                [weight]="weight"
+                (pokemonSeleccionado)="selectPoke()"
+        ></app-pokemon-card>
+
+        @if (pokeHist.length > 1) {
+            <h2>Historial</h2>
+            @for (p of pokeHist; track p) {
+            <app-pokemon-card
+                [name]="p.name"
+                [actualPhoto]="p.photo"
+                [height]="p.height"
+                [weight]="p.weight"
+            ></app-pokemon-card>
+        }
+    }
+        
+    <button (click)="newSearch()">Nueva Busqueda</button>
+    }
+
+</div>

@@ -87,8 +87,6 @@ export class View2 implements OnInit {
     this.generarLetras();
     this.palabra = '';
   }
-
-  
   
   public words(): void {
     if (this.palabra) {

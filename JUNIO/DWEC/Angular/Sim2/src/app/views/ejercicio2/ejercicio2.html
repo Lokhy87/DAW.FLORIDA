@@ -1,0 +1,26 @@
+<div id="page">
+    <section>
+        <div class="grid">
+            @if (mode === 'pokemons') {
+                @for (p of pokemon; track $index) {
+                    <app-pokemon 
+                    [name]="p.name" 
+                    [image]="p.photo" 
+                    (selectedPokemon)="selectionPokemon($event)"
+                    ></app-pokemon>
+                }
+            }
+        </div>
+    </section>
+</div>
+<!-- PHOTO -->
+<div class="container-view-three">
+    <div class="photos-view-three">
+        @if (mode === 'detalles') {
+            <app-photos
+            [photos]="pokemonSelec?.sprites"
+            (returnPokemon)="returnPokemons()"
+            ></app-photos>
+        }
+    </div>
+</div>

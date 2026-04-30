@@ -1,0 +1,36 @@
+<table id="tablebot">
+    <tbody>
+        @if (mode === 'Inicio') {
+            <tr>
+                <td>
+                    <h2 [style.background-image]="'url(' + actualRick?.image + ')'" class="ricks-name"
+                        (click)="miniRicky()">Ricks</h2>
+                    <h2 [style.background-image]="'url(' + actualMorty?.image + ')'" class="ricks-name"
+                        (click)="miniMorty()">Morty</h2>
+                </td>
+            </tr>
+        } @if (mode === 'Mini Rick') {
+            @for (r of rickList; track r) {
+                <tr>
+                    <td>
+                        <img [src]="r.image" (click)="selection(r)" style="width: 20%;" />
+                    </td>
+                </tr>
+            }
+        } @if (mode === 'Mini Morty') {
+            @for (m of mortyList; track m) {
+                <tr>
+                    <td>
+                        <img [src]="m.image" (click)="selection(m)" style="width: 20%;" />
+                    </td>
+                </tr>
+            }
+        } @if (mode === 'Detalle') {
+            <tr>
+                <td>
+                    <img [src]="detail?.image" (click)="volver()" style="width: 20%;" />
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>

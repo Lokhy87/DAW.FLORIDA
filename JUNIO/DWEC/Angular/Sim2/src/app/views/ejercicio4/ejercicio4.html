@@ -1,0 +1,49 @@
+<!-- EJERCICIO 4  -->
+<section>
+@if (mode === 'inicio') {
+    <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" method="post">
+        <div class="answer-bank">
+            <div class="answer">
+                <input type="text" name="name" id="name" value="nombre" placeholder="nombre" formControlName="name" />
+            </div>
+            <div class="answer">
+                <input type="submit" value="Enviar" class="primary" />
+            </div>
+        </div>
+    </form>
+}
+    
+</section>
+
+@if (mode === 'seleccion') {
+    <div id='render-more'>
+        <button (click)="showDefinition()">Significados</button>
+        <button (click)="showSynonyms()">Sinónimos</button>
+        <button (click)="showAntonyms()">Antónimos</button>
+    </div>
+}
+
+@if (mode === 'definicion') {
+<div id='render-more'>
+    <app-text [definition]="definitions"></app-text>
+    <button (click)="volver()">Volver</button>
+    <button (click)="newSearch()">Nueva búsqueda</button>
+</div>
+}
+
+@if (mode === 'sinonimos') {
+<div id='render-more'>
+    <app-text [synonyms]="synonyms"></app-text>
+    <button (click)="volver()">Volver</button>
+    <button (click)="newSearch()">Nueva búsqueda</button>
+</div>
+}
+
+@if (mode === 'antonimos') {
+<div id='render-more'>
+    <app-text [antonyms]="antonyms"></app-text>
+    <button (click)="volver()">Volver</button>
+    <button (click)="newSearch()">Nueva búsqueda</button>
+</div>
+}
+

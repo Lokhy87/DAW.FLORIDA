@@ -1,0 +1,15 @@
+<!-- CAROUSEL -->
+<div class="card">
+    <div class='photo'
+    [ngStyle]="{'background-image': 'url(' + photo + ')'}">
+    </div>
+    <div class="footer">
+        <div class="titles">
+            <h2 class='card-title'>{{ name }}</h2>
+        </div>
+    </div>
+    <div id='render-more'>
+        <button (click)="onPrev()">ANTERIOR</button>
+        <button (click)="onNext()">SIGUIENTE</button>
+    </div>
+</div>

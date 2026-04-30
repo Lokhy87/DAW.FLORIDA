@@ -1,1 +1,27 @@
-<p>view3 works!</p>
+@if (mode === 'Form') {
+    <section>
+        <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" method="post">
+            <div class="answer-bank">
+                <div class="answer">
+                    <input type="text" formControlName="name" id="name" placeholder="nombre" />
+                </div>
+                <div class="answer">
+                    <input type="submit" value="Enviar" class="primary" />
+                </div>
+            </div>
+        </form>
+    </section>
+} @if (mode === 'Result') {
+    <div id='render-more'>
+        @for (r of results; track r) {
+            <app-card
+            [character]="r.character"
+            [films]="r.films"
+            ></app-card>
+        }
+        <button (click)="newSearch()">Nueva búsqueda</button>
+    </div>
+}
+
+
+

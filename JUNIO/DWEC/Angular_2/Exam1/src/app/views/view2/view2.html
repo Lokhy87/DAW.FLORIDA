@@ -1,0 +1,42 @@
+<!-- ACTIVIDAD 3 -->
+<section class="main-section">
+
+    @if (mode === 'inicio') {
+        <div class="selector-panel">
+            <button class="primary" (click)="showCharacters()">Personajes</button>
+            <button class="secondary" (click)="showEpisodes()">Capítulos</button>
+        </div>
+    }
+
+    <div class="pagination-panel">
+        <button class="secondary">Anterior página</button>
+        <button class="secondary">Siguiente página</button>
+    </div>
+
+    @if (mode === 'personajes') {
+        @for ( c of list; track c) {
+            <app-character-card
+                [name]="c.name"
+                [image]="c.image"
+                (selectedCharacter)="selectImg(c)" 
+            ></app-character-card>
+        }
+        @if (character) {
+            <div class="details-box">
+                <p><strong>Nombre:</strong>{{ character.name }}</p>
+                <p><strong>Especie:</strong>{{ character.species }}</p>
+                <p><strong>Estado:</strong>{{ character.status }}</p>
+            </div>
+        }
+    }
+
+    @if (mode === 'episodios') {
+        @for (e of episodesList; track e) {
+            <app-character-card
+                [name]="e.name"
+                [image]="defaultimage"
+            ></app-character-card>
+        }
+    }
+
+</section>

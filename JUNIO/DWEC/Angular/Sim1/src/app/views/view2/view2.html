@@ -1,1 +1,18 @@
-<p>view2 works!</p>
+<div class="body">
+    <div class="container">
+        <app-rick
+            [rickList]="rickList"
+            [mortyList]="mortyList"
+            [actualRick]="actualRick"
+            [actualMorty]="actualMorty"
+            [mode]="mode"
+            [detail]="detailCharacter"
+
+            (showRickMiniatures)="miniRick()"
+            (showMortyMiniatures)="miniMorty()"
+            (selectedCharacter)="selectChar($event)"
+            (backToMenu)="returnMenu()"
+        ></app-rick>
+    </div>
+</div>
+

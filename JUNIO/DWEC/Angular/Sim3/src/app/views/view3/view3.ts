@@ -37,7 +37,7 @@ export class View3 {
   private cdr = inject(ChangeDetectorRef)
 
   public selectedCharacters(url: string): void {
-    this.swService.getCharacters(url).subscribe((response:SwCharactersResponse) => {
+    this.swService.getCharacters(url).subscribe((response: SwCharactersResponse) => {
       this.names.push(response.name)
       this.cdr.detectChanges();
     })

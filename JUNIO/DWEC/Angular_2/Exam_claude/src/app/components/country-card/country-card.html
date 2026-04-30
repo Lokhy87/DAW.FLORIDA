@@ -1,0 +1,23 @@
+@if (country) {
+<div class="country-card">
+    <div class="country-header">
+        <img [src]="country.flags.png" alt="bandera" />
+        <span class="country-name" (click)="showButton = true">{{ country.name.official }}</span>
+    </div>
+    <div class="country-data">
+        <p>Capital: <span>{{ country.capital[0] }}</span></p>
+        <p>Población: <span>{{ country.population}}</span></p>
+        <p>Región: <span>{{ country.region }}</span></p>
+    </div>
+    
+    @if (showButton) {
+        <button class="btn-cities"  (click)="seleccion()">Ver capitales vecinas</button>
+    }
+    
+    <ul class="result-list">
+        @for (c of capitals; track c) {
+            {{ c }}        
+        }
+    </ul>
+</div>
+}

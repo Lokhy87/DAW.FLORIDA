@@ -1,0 +1,13 @@
+<!-- CARD RESULTADO -->
+<div class="pokemon-card">
+    <div class="image-container">
+        <img [src]="actualPhoto"
+        (click)="seleccionar()">
+    </div>
+
+    <div class="pokemon-info">
+        <span class="caption">{{ name }}</span>
+        <p>Altura: {{ height }}</p>
+        <p>Peso: {{ weight }}</p>
+    </div>
+</div>

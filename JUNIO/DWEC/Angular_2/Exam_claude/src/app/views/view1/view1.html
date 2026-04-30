@@ -1,0 +1,28 @@
+<!-- view1.component.html -->
+<div class="view1-container">
+ 
+  <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" method="post">
+    <div class="search-form">
+      <div class="answer">
+        <input type="text" formControlName="name" placeholder="nombre del país" />
+      </div>
+      <div class="answer">
+        <input type="submit" value="Enviar" class="primary" />
+      </div>
+    </div>
+  </form>
+ 
+  <!-- Área donde se acumulan los componentes CountryCard -->
+  <div class="results-area">
+    @for (c of countryInt; track c; let i = $index) {
+        <app-country-card
+            [country]="c.country"
+            [capitals]="c.capitals"
+            (paisSeleccionado)="showRegion($event, i)"
+          
+        >
+        </app-country-card>
+    }
+  </div>
+ 
+</div>

@@ -1,0 +1,15 @@
+<div>
+    <div id='render-more'>
+        <button (click)="return()">Atrás</button>
+    </div>
+
+    @if (pokeSelection){
+        <img [src]="pokeSelection" style="width: 100%;"  (click)="clearSelection()">
+    } @else {
+        @for (p of photos; track $index) {
+        <img [src]="p" style="width: 24%;"
+        (click)="miniSelection(p)">       
+        }
+    }
+
+</div>

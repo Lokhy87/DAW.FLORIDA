@@ -1,0 +1,14 @@
+<div class="card">
+    <p>{{ character?.name }}</p>
+    <p>{{ character?.height }}</p>
+    <p>{{ character?.mass }}</p>
+    <div>
+        <div class="image-container">
+            <img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Star_Wars_Logo.svg">
+        </div>
+        @for (f of films; track f) {
+            <span class="caption">{{ f.title }}</span>
+            <p>{{ f.opening_crawl }}</p>
+        }
+    </div>
+</div>
