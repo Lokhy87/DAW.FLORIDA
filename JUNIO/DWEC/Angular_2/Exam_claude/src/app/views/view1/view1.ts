@@ -23,7 +23,7 @@ export class View1 {
   public countryInt: CountryCapitals[] = [];
   public capitals: string[] = [];
 
-  private cdr = inject(ChangeDetectorRef)
+  private cdr = inject(ChangeDetectorRef);
 
   reactiveForm = new FormGroup({
     name: new FormControl('', { nonNullable: true })

@@ -1,1 +1,24 @@
-<p>view3 works!</p>
+<div class="view3-container">
+
+  <form (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" method="post">
+    <div class="search-form">
+      <div class="answer">
+        <input type="text" formControlName="name" placeholder="título del libro" />
+      </div>
+      <div class="answer">
+        <input type="submit" value="Enviar" class="primary" />
+      </div>
+    </div>
+  </form>
+
+  <div class="results-area">
+    @for (b of books; track b) {
+        <app-book-card
+            [book]="b.books[0]"
+            [books]="b.relationalBooks"
+        ></app-book-card>  
+    }
+ 
+  </div>
+
+</div>

@@ -35,7 +35,6 @@ export class Ejercicio4 {
           this.antonyms = response[0].meanings[0].antonyms;
           this.mode = 'seleccion';
           this.reactiveForm.reset()
-          console.log(response)
           this.cdr.detectChanges(); 
       })
     }

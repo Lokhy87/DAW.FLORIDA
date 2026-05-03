@@ -1,0 +1,21 @@
+<div class="country-card">
+
+  <div class="country-header">
+    <img [src]="'https://covers.openlibrary.org/b/id/' + book?.cover_i + '-M.jpg'" alt="portada" />
+    <span class="country-name" (click)="showBooks = !showBooks">{{ book?.title }}</span>
+  </div>
+
+  <div class="country-data">
+    <p>Autor: <span>{{ book?.author_name }}</span></p>
+    <p>Año: <span>{{ book?.first_publish_year }}</span></p>
+  </div>
+
+  @if (showBooks) {
+      <ul class="result-list">
+    @for (b of books ; track b) { 
+            <li>{{ b.title }}</li>
+        }
+    </ul>
+    }
+
+</div>
