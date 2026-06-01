@@ -1,0 +1,8 @@
+  <div class="character-card">
+    <img [src]="image" alt="Rick Sanchez" (click)="selection(name)" />
+    <p class="character-name">{{ name }}</p>
+    <div class="character-nav">
+      <button type="button" (click)="prevItem()">Anterior</button>
+      <button type="button" (click)="nextitem()">Siguiente</button>
+    </div>
+  </div>

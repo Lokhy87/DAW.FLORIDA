@@ -5,7 +5,6 @@ export interface RickMortyEpResponse {
 
 export interface Info {
     pages: number;
-
 }
 
 export interface EpResult {

@@ -1,0 +1,31 @@
+<div class="view-container">
+ 
+    <!-- Filtro por estado -->
+    <!-- <div class="filter-bar">
+      <label for="status">Estado:</label>
+      <select id="status">
+        <option value="">Todos</option>
+        <option value="alive">Alive</option>
+        <option value="dead">Dead</option>
+        <option value="unknown">Unknown</option>
+      </select>
+    </div> -->
+ 
+    <!-- character-card.component.html (hijo) -->
+    <div class="character-card">
+        <app-character-card
+            [name]="name"
+            [image]="image"
+            (firsCharacter)=""
+            (nextCharacter)="nextCharacter()"
+            (prevCharacter)="prevCharacter()"
+        ></app-character-card>
+    </div>
+ 
+    <!-- Navegación de páginas (en el padre) -->
+    <div class="page-nav">
+      <button type="button">Página anterior</button>
+      <button type="button">Página siguiente</button>
+    </div>
+ 
+</div>

@@ -1,0 +1,5 @@
+  <div class="pokemon-card">
+    <p class="pokemon-name">{{ pokemon.name }}</p>
+    <img [src]="images[0]" alt="imagenPokemon" (click)="seleccion()" />
+    <p class="pokemon-info">Peso: {{ pokemon.weight }} | Altura: {{ pokemon.height }}</p>
+  </div>

@@ -1,0 +1,13 @@
+  <div class="modal-overlay">
+    <div class="modal-box">
+      <button class="close-btn" (click)="cierreMod()">✕</button>
+      <img [src]="images[currentindex]" alt="sprite" />
+      <div class="modal-nav">
+        <button type="button" (click)="anterior()">Anterior</button>
+        <button type="button" (click)="siguiente()">Siguiente</button>
+      </div>
+      <div style="margin-top: 10px;">
+        <button type="button" (click)="cerrarTodo()">Volver</button>
+      </div>
+    </div>
+  </div>

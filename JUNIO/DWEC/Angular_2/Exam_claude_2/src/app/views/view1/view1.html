@@ -1,0 +1,32 @@
+<div class="view-container">
+    @if (modal === 'inicio') {
+        <!-- Formulario de búsqueda -->
+        <form  (ngSubmit)="onSubmit()" [formGroup]="reactiveForm" method="post">
+            <div class="form-group">
+                <input type="text" formControlName="name" placeholder="nombre del pokémon" />
+                <button type="submit">Enviar</button>
+            </div>
+        </form>
+    }
+ 
+    <!-- Lista de tarjetas Pokémon (componentes hijo pokemon-card) -->
+    <div class="cards-container">
+            <!-- pokemon-card.component.html × N (uno por búsqueda acumulada) -->
+            @for (p of pokemonList; track p) {
+                <app-pokemon-card
+                    [pokemon]="p.pokemon"
+                    [images]="p.images"
+                    (pokemonSeleccionado)="selectionCard($event)"
+                ></app-pokemon-card>
+            }
+    </div>
+
+    @if (modal === 'detail') {
+        <!-- pokemon-detail.component.html (modal, oculto por defecto) -->
+        <app-pokemon-detail
+        (cerrarModal)="details()"
+        [images]="pokemonSelection!.images"
+        (volver)="volver()"
+        ></app-pokemon-detail>
+    }
+</div>
